@@ -5,90 +5,64 @@
 <script src="{{ "/assets/js/darkMode.js" | relative_url }}"></script>
 
 <!-- Footer -->
-<div class="container-fluid">
-<footer class="page-footer font-small black pt-4">
-
-    <!-- Footer Links -->
-    <div class="container-fluid text-center text-md-left">
-  
-      <!-- Grid row -->
-      <div class="row">
-  
-        <!-- Grid column -->
-        <div class="col-md-6 mt-md-0 mt-3">
-  
-            <!-- Content -->
-            <h5 class="text-uppercase">Edwin Gigi - Portfolio</h5>
-            <p>Please feel free to contact me for any enquiries or issues with the site!</p>
-            {%- if site.author %}
-                {% if site.author.email -%}
-                    <a class="u-email" href="mailto:{{ site.author.email }}">{{ site.author.email }}</a>
-                {%- endif %}
-            {%- endif %}
-  
+<footer class="footer bg-white py-5">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6">
+                <h3 class="mb-4">Let's Connect</h3>
+                <div class="social-links">
+                    <a href="https://linkedin.com/in/edwin-gigi" target="_blank" class="social-link">
+                        <i class="fab fa-linkedin"></i>
+                    </a>
+                    <a href="https://github.com/edwingigi" target="_blank" class="social-link">
+                        <i class="fab fa-github"></i>
+                    </a>
+                    <a href="mailto:edwingigi2012@gmail.com" class="social-link">
+                        <i class="fas fa-envelope"></i>
+                    </a>
+                </div>
+            </div>
+            <div class="col-md-6 text-md-end">
+                <p class="mb-0">&copy; {{ site.time | date: '%Y' }} Edwin Gigi. All rights reserved.</p>
+                <p class="text-muted">Built with ❤️ using Jekyll</p>
+            </div>
         </div>
-        <!-- Grid column -->
-  
-        <hr class="clearfix w-100 d-md-none pb-3">
-  
-        <!-- Grid column -->
-        <div class="col-md-3 mb-md-0 mb-3">
-  
-			<!-- Links -->
-			<h5 class="text-uppercase">Contact Methods</h5>
-			<ul class="list-group list-group-horizontal socialClump">
-				<li class="list-group-item"> <a href="mailto:edwingigi2012@gmail.com"> 
-          			<img src="{{ "/assets/images/gmail.png" | relative_url }}" class="footerSocialIcons" alt="Gmail icon"> 
-				</a></li>
-				<li class="list-group-item"> <a href="https://github.com/EdwinGigi">
-					<img src="{{ "/assets/images/githubIcon.png" | relative_url }}" class="footerSocialIcons" alt="Github Icon">
-				</a></li>
-				<li class="list-group-item"> <a href="https://www.linkedin.com/in/edwin-gigi/"> 
-					<img src="{{ "/assets/images/linkedinIcon.png" | relative_url }}" class="footerSocialIcons" alt="LinkedIn Icon">
-				</a> </li>
-			</ul>
-  
-        </div>
-        <!-- Grid column -->
-  
-        <!-- Grid column -->
-        <div class="col-md-3 mb-md-0 mb-3">
-  
-			<!-- Links -->
-			<h5 class="text-uppercase">Links</h5>
-	
-			<ul class="list-unstyled">
-				<li>
-					<!-- TODO add about page -->
-					<a href="/about">About</a>
-				</li>
-				<li>
-					<a href="/projects">Projects</a>
-				</li>
-				<li>
-					<a href="{{ "assets/uploads/Edwin Gigi -CV.pdf" | relative_url }}"  target="_blank">CV</a> 
-				</li>
-			</ul>
-  
-        </div>
-        <!-- Grid column -->
-  
-      </div>
-      <!-- Grid row -->
-  
     </div>
-    <!-- Footer Links -->
-  
-    <!-- Copyright -->
-    <div class="footer-copyright text-center py-3">
-      MIT License
-      <br>
-      Copyright © 2025 Edwin
-      <!-- Favicon copyright -->
-      <div>Icons made by <a href="https://www.flaticon.com/authors/freepik" title="Freepik">Freepik</a> from <a href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a></div>
-    </div>
-    <!-- Copyright -->
-  
 </footer>
-<!-- Footer -->
-</div>
+
+<style>
+.footer {
+    border-top: 1px solid var(--border-color);
+    margin-top: 4rem;
+}
+
+.social-links {
+    display: flex;
+    gap: 1rem;
+}
+
+.social-link {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background: var(--background-color);
+    color: var(--primary-color);
+    transition: all 0.3s ease;
+}
+
+.social-link:hover {
+    background: var(--primary-color);
+    color: white;
+    transform: translateY(-3px);
+}
+
+@media (max-width: 767.98px) {
+    .col-md-6:last-child {
+        text-align: left !important;
+        margin-top: 2rem;
+    }
+}
+</style>

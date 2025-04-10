@@ -5,7 +5,7 @@ title: "Projects"
 <link rel="stylesheet" href="{{ "/assets/css/projects.css" | relative_url }}">
 
 <div class="container">
-    <h1 class="text-center mb-4">Featured Projects</h1>
+    <h1 class="text-center mb-5">Featured Projects</h1>
     
     <!-- Text Summarizer Project -->
     <div class="project-card">
@@ -14,69 +14,127 @@ title: "Projects"
                 <img src="{{ "/assets/images/youTubeIcon.png" | relative_url }}" class="img-fluid project-image" alt="Text Summarizer">
             </div>
             <div class="col-md-8">
-                <h2>Text Summarizer</h2>
+                <h2 class="project-title">Text Summarizer</h2>
                 <p class="project-description">
-                    A text summarizer that uses AI to summarize text.
+                    A sophisticated text summarization tool powered by AI that condenses lengthy articles and documents into concise summaries while maintaining key information and context.
                 </p>
                 <div class="tech-stack">
-                    <span class="badge badge-primary">Flask</span>
-                    <span class="badge badge-primary">Python</span>
-                    <span class="badge badge-primary">NLP Libraries</span>
-                    <span class="badge badge-primary">Machine Learning</span>
+                    <span class="tech-badge">Flask</span>
+                    <span class="tech-badge">Python</span>
+                    <span class="tech-badge">NLP</span>
+                    <span class="tech-badge">Machine Learning</span>
                 </div>
-                <div class="project-links mt-3">
-                    <a href={% post_url 2022-06-01-Text-Summariser %} class="btn btn-primary mr-2">
-                        <i class="fas fa-code"></i> Development
+                <div class="project-links mt-4">
+                    <a href={% post_url 2022-06-01-Text-Summariser %} class="btn btn-primary">
+                        <i class="fas fa-code"></i> Development Details
                     </a>
-                    <a href="https://github.com/EdwinGigi/TextSummariser" target="_blank" class="btn btn-success">
-                        <i class="fas fa-external-link-alt"></i> GitHub
+                    <a href="https://github.com/EdwinGigi/TextSummariser" target="_blank" class="btn btn-outline-primary">
+                        <i class="fab fa-github"></i> View on GitHub
                     </a>
                 </div>
             </div>
         </div>
     </div>
+</div>
 
 <style>
 .project-card {
-    background: #fff;
-    border-radius: 10px;
-    padding: 2rem;
-    margin-bottom: 2rem;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s ease;
+    background: var(--card-bg);
+    border-radius: 1rem;
+    padding: 2.5rem;
+    margin-bottom: 3rem;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .project-card:hover {
     transform: translateY(-5px);
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
 }
 
 .project-image {
-    border-radius: 8px;
-    max-height: 200px;
+    border-radius: 1rem;
+    max-height: 250px;
     object-fit: cover;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+}
+
+.project-title {
+    color: var(--primary-color);
+    margin-bottom: 1rem;
+    font-weight: 700;
 }
 
 .project-description {
-    color: #666;
-    margin: 1rem 0;
+    color: var(--text-light);
+    font-size: 1.1rem;
+    line-height: 1.6;
+    margin-bottom: 1.5rem;
 }
 
 .tech-stack {
-    margin: 1rem 0;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    margin-bottom: 1.5rem;
 }
 
-.tech-stack .badge {
-    margin-right: 0.5rem;
+.tech-badge {
+    background: rgba(37, 99, 235, 0.1);
+    color: var(--primary-color);
     padding: 0.5rem 1rem;
+    border-radius: 0.5rem;
     font-size: 0.9rem;
-}
-
-.project-links .btn {
-    margin-right: 0.5rem;
-    padding: 0.5rem 1rem;
-}
-
-.badge {
     font-weight: 500;
+}
+
+.project-links {
+    display: flex;
+    gap: 1rem;
+}
+
+.btn {
+    padding: 0.75rem 1.5rem;
+    border-radius: 0.5rem;
+    font-weight: 500;
+    transition: all 0.3s ease;
+}
+
+.btn-primary {
+    background: var(--primary-color);
+    border: none;
+    color: white;
+}
+
+.btn-primary:hover {
+    background: var(--secondary-color);
+    transform: translateY(-2px);
+}
+
+.btn-outline-primary {
+    border: 2px solid var(--primary-color);
+    color: var(--primary-color);
+    background: transparent;
+}
+
+.btn-outline-primary:hover {
+    background: var(--primary-color);
+    color: white;
+    transform: translateY(-2px);
+}
+
+@media (max-width: 768px) {
+    .project-card {
+        padding: 1.5rem;
+    }
+    
+    .project-links {
+        flex-direction: column;
+    }
+    
+    .btn {
+        width: 100%;
+        text-align: center;
+    }
 }
 </style>
