@@ -1,0 +1,44 @@
+[
+    {
+        "ranking": 1,
+        "country": "UK",
+        "ping": 65,
+        "ip": "153.250.213.95",
+        "port": 4596
+    },
+    {
+        "ranking": 2,
+        "country": "Germany",
+        "ping": 180,
+        "ip": "187.48.228.229",
+        "port": 5925
+    },
+    {
+        "ranking": 3,
+        "country": "France",
+        "ping": 99,
+        "ip": "249.45.12.168",
+        "port": 6959
+    },
+    {
+        "ranking": 4,
+        "country": "Italy",
+        "ping": 250,
+        "ip": "171.136.88.69",
+        "port": 8625
+    },
+    {
+        "ranking": 5,
+        "country": "India",
+        "ping": 1120,
+        "ip": "34.197.221.129",
+        "port": 5896
+    },
+    {
+        "ranking": 6,
+        "country": "China",
+        "ping": 2522,
+        "ip": "66.26.216.176",
+        "port": 5625
+    }
+]

@@ -1,0 +1,193 @@
+---
+layout: default
+title: "Projects"
+---
+<link rel="stylesheet" href="{{ "/assets/css/projects.css" | relative_url }}">
+
+<div class="container">
+    <h1 class="text-center mb-4">Featured Projects</h1>
+    
+    <!-- QueueTube Project -->
+    <div class="project-card">
+        <div class="row align-items-center">
+            <div class="col-md-4">
+                <img src="{{ "/assets/images/youTubeIcon.png" | relative_url }}" class="img-fluid project-image" alt="QueueTube">
+            </div>
+            <div class="col-md-8">
+                <h2>QueueTube</h2>
+                <p class="project-description">
+                    A sophisticated video queue management system that allows users to organize and prioritize their YouTube subscriptions. 
+                    Features include timestamp saving, channel prioritization, and a clean, intuitive interface.
+                </p>
+                <div class="tech-stack">
+                    <span class="badge badge-primary">React</span>
+                    <span class="badge badge-primary">Node.js</span>
+                    <span class="badge badge-primary">MongoDB</span>
+                    <span class="badge badge-primary">JWT Auth</span>
+                </div>
+                <div class="project-links mt-3">
+                    <a href={% post_url 2020-07-16-QueueTube %} class="btn btn-primary mr-2">
+                        <i class="fas fa-code"></i> Development
+                    </a>
+                    <a href="https://queue-tube.herokuapp.com/" target="_blank" class="btn btn-success">
+                        <i class="fas fa-external-link-alt"></i> Live Demo
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Computer Vision Head Tracking -->
+    <div class="project-card">
+        <div class="row align-items-center">
+            <div class="col-md-4">
+                <img src="{{ "/assets/images/projects/cvht/demoImage1.png" | relative_url }}" class="img-fluid project-image" alt="Head Tracking">
+            </div>
+            <div class="col-md-8">
+                <h2>Computer Vision Head Tracking</h2>
+                <p class="project-description">
+                    An open-source head tracking solution using computer vision and machine learning. 
+                    Processes webcam input to provide real-time head movement tracking for gaming and VR applications.
+                </p>
+                <div class="tech-stack">
+                    <span class="badge badge-primary">OpenCV</span>
+                    <span class="badge badge-primary">DLib</span>
+                    <span class="badge badge-primary">.NET</span>
+                    <span class="badge badge-primary">WPF</span>
+                </div>
+                <div class="project-links mt-3">
+                    <a href={% post_url 2020-09-14-CVHeadTrack %} class="btn btn-primary mr-2">
+                        <i class="fas fa-code"></i> Development
+                    </a>
+                    <a href="https://github.com/Nikhil-KO/CVHeadTrack" target="_blank" class="btn btn-dark">
+                        <i class="fab fa-github"></i> GitHub
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- VR Learning Environment -->
+    <div class="project-card">
+        <div class="row align-items-center">
+            <div class="col-md-4">
+                <img src="{{ "/assets/images/vr-icon.png" | relative_url }}" class="img-fluid project-image" alt="VR Learning">
+            </div>
+            <div class="col-md-8">
+                <h2>Virtual Reality Learning Environment</h2>
+                <p class="project-description">
+                    An immersive educational platform that leverages virtual reality technology to create engaging learning experiences.
+                    Currently in development with focus on interactive 3D environments and real-time collaboration.
+                </p>
+                <div class="tech-stack">
+                    <span class="badge badge-primary">Unity</span>
+                    <span class="badge badge-primary">C#</span>
+                    <span class="badge badge-primary">WebXR</span>
+                    <span class="badge badge-primary">Three.js</span>
+                </div>
+                <div class="project-links mt-3">
+                    <span class="badge badge-info">In Development</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Frame Label -->
+    <div class="project-card">
+        <div class="row align-items-center">
+            <div class="col-md-4">
+                <img src="{{ "/assets/images/ml.jpg" | relative_url }}" class="img-fluid project-image" alt="Frame Label">
+            </div>
+            <div class="col-md-8">
+                <h2>Frame Label</h2>
+                <p class="project-description">
+                    A specialized tool for efficient image labeling and dataset preparation for machine learning models.
+                    Developed to streamline the data preparation process for computer vision applications.
+                </p>
+                <div class="tech-stack">
+                    <span class="badge badge-primary">Python</span>
+                    <span class="badge badge-primary">TKinter</span>
+                    <span class="badge badge-primary">OpenCV</span>
+                </div>
+                <div class="project-links mt-3">
+                    <span class="badge badge-warning">Private Repository</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Derivative Trade Monitor -->
+    <div class="project-card">
+        <div class="row align-items-center">
+            <div class="col-md-4">
+                <img src="{{ "/assets/images/projects/cs261/homePage.png" | relative_url }}" class="img-fluid project-image" alt="Trade Monitor">
+            </div>
+            <div class="col-md-8">
+                <h2>Derivative Trade Monitor</h2>
+                <p class="project-description">
+                    A comprehensive trading platform with anomaly detection and automated reporting capabilities.
+                    Features machine learning-based input validation and scheduled report generation.
+                </p>
+                <div class="tech-stack">
+                    <span class="badge badge-primary">Java</span>
+                    <span class="badge badge-primary">Spring Boot</span>
+                    <span class="badge badge-primary">Machine Learning</span>
+                    <span class="badge badge-primary">SQL</span>
+                </div>
+                <div class="project-links mt-3">
+                    <a href={% post_url 2020-09-26-CS261 %} class="btn btn-primary mr-2">
+                        <i class="fas fa-code"></i> Development
+                    </a>
+                    <a href="https://youtu.be/od7Atyo414g" target="_blank" class="btn btn-danger">
+                        <i class="fab fa-youtube"></i> Demo
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<style>
+.project-card {
+    background: #fff;
+    border-radius: 10px;
+    padding: 2rem;
+    margin-bottom: 2rem;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.project-card:hover {
+    transform: translateY(-5px);
+}
+
+.project-image {
+    border-radius: 8px;
+    max-height: 200px;
+    object-fit: cover;
+}
+
+.project-description {
+    color: #666;
+    margin: 1rem 0;
+}
+
+.tech-stack {
+    margin: 1rem 0;
+}
+
+.tech-stack .badge {
+    margin-right: 0.5rem;
+    padding: 0.5rem 1rem;
+    font-size: 0.9rem;
+}
+
+.project-links .btn {
+    margin-right: 0.5rem;
+    padding: 0.5rem 1rem;
+}
+
+.badge {
+    font-weight: 500;
+}
+</style>

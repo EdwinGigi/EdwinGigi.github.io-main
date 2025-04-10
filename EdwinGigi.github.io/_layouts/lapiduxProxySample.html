@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="{{ site.lang | default: "en-US" }}">
+
+<head>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta charset="utf-8">
+	<title>{{ page.title }} - {{ site.title }}</title>
+	{% include header.html %}
+	<link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.21/css/jquery.dataTables.css">
+	<link rel="stylesheet" href="{{ "/assets/css/lapidux/proxy/main.css" | relative_url }}">
+</head>
+
+<body>
+	{% include navbar.html %}
+	
+	{{ content }}
+
+	{% include footer.html %}
+</body>
+<script type="text/javascript" charset="utf8" src="https://cdn.datatables.net/1.10.21/js/jquery.dataTables.js"></script>
+<script>
+	const testData = {{ site.data.lapidux_sample_proxy | jsonify }};
+</script>
+<script src="{{ "/assets/js/lapidux/table.js" | relative_url }}"></script>
+<script src="{{ "/assets/js/lapidux/verification.js" | relative_url }}"></script>
+</html>

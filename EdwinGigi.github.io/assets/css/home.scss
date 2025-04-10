@@ -1,0 +1,15 @@
+---
+---
+
+html[data-theme="light"] {
+	--starCheck: orange;
+}
+
+html[data-theme="dark"] {
+    --starCheck: purple;
+ 
+}
+
+.checked {
+    color: var(--starCheck);
+}

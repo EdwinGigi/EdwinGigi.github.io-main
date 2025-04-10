@@ -1,0 +1,94 @@
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+<script src="{{ "/assets/js/main.js" | relative_url }}"></script>
+<script src="{{ "/assets/js/darkMode.js" | relative_url }}"></script>
+
+<!-- Footer -->
+<div class="container-fluid">
+<footer class="page-footer font-small black pt-4">
+
+    <!-- Footer Links -->
+    <div class="container-fluid text-center text-md-left">
+  
+      <!-- Grid row -->
+      <div class="row">
+  
+        <!-- Grid column -->
+        <div class="col-md-6 mt-md-0 mt-3">
+  
+            <!-- Content -->
+            <h5 class="text-uppercase">Nikhil Kalamannil Oommen - Portfolio</h5>
+            <p>Please feel free to contact me for any enquiries or issues with the site!</p>
+            {%- if site.author %}
+                {% if site.author.email -%}
+                    <a class="u-email" href="mailto:{{ site.author.email }}">{{ site.author.email }}</a>
+                {%- endif %}
+            {%- endif %}
+  
+        </div>
+        <!-- Grid column -->
+  
+        <hr class="clearfix w-100 d-md-none pb-3">
+  
+        <!-- Grid column -->
+        <div class="col-md-3 mb-md-0 mb-3">
+  
+			<!-- Links -->
+			<h5 class="text-uppercase">Contact Methods</h5>
+			<ul class="list-group list-group-horizontal socialClump">
+				<li class="list-group-item"> <a href="mailto:nikhiloommen12@gmail.com"> 
+          			<img src="{{ "/assets/images/gmail.png" | relative_url }}" class="footerSocialIcons" alt="Gmail icon"> 
+				</a></li>
+				<li class="list-group-item"> <a href="https://github.com/Nikhil-KO">
+					<img src="{{ "/assets/images/githubIcon.png" | relative_url }}" class="footerSocialIcons" alt="Github Icon">
+				</a></li>
+				<li class="list-group-item"> <a href="https://www.linkedin.com/in/nikhil-kalamannil/"> 
+					<img src="{{ "/assets/images/linkedinIcon.png" | relative_url }}" class="footerSocialIcons" alt="LinkedIn Icon">
+				</a> </li>
+			</ul>
+  
+        </div>
+        <!-- Grid column -->
+  
+        <!-- Grid column -->
+        <div class="col-md-3 mb-md-0 mb-3">
+  
+			<!-- Links -->
+			<h5 class="text-uppercase">Links</h5>
+	
+			<ul class="list-unstyled">
+				<li>
+					<!-- TODO add about page -->
+					<a href="/about">About</a>
+				</li>
+				<li>
+					<a href="/projects">Projects</a>
+				</li>
+				<li>
+					<a href="{{ "assets/uploads/Nikhil Kalamannil Oommen - CV.pdf" | relative_url }}"  target="_blank">CV</a>
+				</li>
+			</ul>
+  
+        </div>
+        <!-- Grid column -->
+  
+      </div>
+      <!-- Grid row -->
+  
+    </div>
+    <!-- Footer Links -->
+  
+    <!-- Copyright -->
+    <div class="footer-copyright text-center py-3">
+      MIT License
+      <br>
+      Copyright © 2020 Nikhil
+      <!-- Favicon copyright -->
+      <div>Icons made by <a href="https://www.flaticon.com/authors/freepik" title="Freepik">Freepik</a> from <a href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a></div>
+    </div>
+    <!-- Copyright -->
+  
+</footer>
+<!-- Footer -->
+</div>

@@ -1,0 +1,63 @@
+---
+---
+
+html[data-theme="light"] {
+	scroll-behavior: smooth;
+	--link-color: rgb(0, 112, 201);
+  	--main-background-color: hsl(0, 0%, 90%);
+	--main-text-color: hsl(0, 0%, 20%);
+	--burger-icon: black;
+}
+
+html[data-theme="dark"] {
+	scroll-behavior: smooth;
+  	--link-color:  #2BE022;
+  	--main-background-color: hsl(217.5, 42.1%, 7.5%);
+	--main-text-color: hsl(0, 0%, 85%);
+	--burger-icon: white;  
+}
+
+body {
+	background-color: var(--main-background-color);
+	color: var(--main-text-color);
+	font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+}
+
+a {
+	color: var(--link-color);
+}
+
+article {
+	max-width: 650px; 
+	margin: 2em auto;
+}
+
+
+h1 {
+	font-size: 2rem;
+}
+
+h2 {
+	font-size: 1.5rem;
+	margin-top: 2em;
+}
+
+p {
+	font-size: 1.25rem;
+}
+
+hr {
+	display: block; 
+	height: 1px;
+	border: 0;
+	border-top: 1px solid var(--link-color);
+	margin: 1em 0; padding: 0; 
+}
+
+.btn-primary:hover {
+	background-color: var(--link-color);
+}
+
+.burgerIcon {
+	color: var(--burger-icon);
+}

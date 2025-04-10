@@ -1,0 +1,42 @@
+<div class="container-fluid" id="navbar">
+<nav class="navbar navbar-expand-lg">
+    <a class="navbar-brand" href="/">Home</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <i class="fa fa-bars burgerIcon" aria-hidden="true"></i>
+    </button>
+  
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav mr-auto">
+            <li class="nav-item">
+                <a class="nav-link" href="{{ "assets/uploads/Nikhil Kalamannil Oommen - CV.pdf" | relative_url }}"  target="_blank">CV</a>
+            </li>
+            <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                Projects
+            </a>
+            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                <a class="dropdown-item" href="/projects">All Projects</a>
+                <div class="dropdown-divider"></div>
+                <a class="dropdown-item" href={% post_url 2020-07-16-QueueTube %}>QueueTube</a>
+                <a class="dropdown-item" href={% post_url 2020-09-14-CVHeadTrack %}>CV Head Track</a>
+                <a class="dropdown-item" href={% post_url 2020-09-14-VRLearning %}>VR Learning Environment</a>
+            </div>
+            </li>
+            <li>
+                <a class="nav-link" href="#focusContact" onclick="scrollContacts()">Contact</a>
+            </li>
+            <li>
+                <a class="nav-link" href="/posts">Posts</a>
+            </li>
+            <li>
+                <a class="nav-link" href="https://github.com/Nikhil-KO">Code</a>
+            </li>
+        </ul>
+        <div class="custom-control custom-switch">
+            <input type="checkbox" class="custom-control-input" id="darkModeSwitch">
+            <label class="custom-control-label" for="darkModeSwitch">Dark Mode</label>
+        </div>
+    </div>
+</nav>
+</div>
+    

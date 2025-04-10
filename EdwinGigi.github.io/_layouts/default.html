@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="{{ site.lang | default: "en-US" }}">
+
+<head>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta charset="utf-8">
+	<title>{{ page.title }} - {{ site.title }}</title>
+	{% include header.html %}
+</head>
+
+<body>
+	{% include navbar.html %}
+	<div class="container">
+		{{ content}}
+	</div>
+</body>
+{% include footer.html %}
+</html>
