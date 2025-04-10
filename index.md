@@ -3,17 +3,17 @@ layout: home
 title: "Edwin Gigi - Software Engineer"
 ---
 # <ins>About Me</ins>
-I'm a passionate Software Engineer with expertise in full-stack development, machine learning, and cloud technologies. I enjoy building scalable applications and solving complex problems through code. My experience spans across various domains including healthcare, web development, and AI.
+I'm a passionate Software Engineer with expertise in full-stack development, machine learning, and cloud technologies. I enjoy building scalable applications and solving complex problems through code. My experience spans across various domains including web development, and AI.
 
 # <ins>Experience</ins>
-### Software Engineer - Current Company
-###### 2020 – Present
+### Software Engineer - Darktrace
+###### 2022 – Present
 * Leading development of scalable web applications using modern tech stack
 * Implementing microservices architecture and CI/CD pipelines
 * Collaborating with cross-functional teams to deliver high-quality software
 * Mentoring junior developers and conducting code reviews
 
-### iCuris Ltd - Software Developer
+### Warehouse Control Solutions - Software Developer
 ###### 08/2019 – 09/2020 
 * Designed and trained CNNs using TensorFlow, achieving high accuracy for healthcare applications
 * Developed Python GUI for data labeling and processing
@@ -23,14 +23,12 @@ I'm a passionate Software Engineer with expertise in full-stack development, mac
 * Created responsive web interfaces using Bootstrap and jQuery
 
 # <ins>Education</ins>
-### ![University of Warwick Logo](/assets/images/WarwickArms.png){:height="50px"} University of Warwick - BSc Computer Science
-###### 2018-2021
+### ![De Montfort University](/assets/images/De-Montfort-Uni.png){:height="50px"} De Montfort University - BSc (Hons) Computer Science with Placement Year
+###### 2018-2022
 First Class Honours
 
 Key modules:
-* Machine Learning and Artificial Intelligence
-* Computer Graphics and Visualization
-* Advanced Computer Architecture
+* Object Oriented Programming
 * Software Engineering and Project Management
 * Operating Systems and Computer Networks
 * Database Systems and Data Structures
@@ -218,6 +216,6 @@ Explore my latest projects and contributions [here!]({{ site.baseurl }}{% link p
 
 # <ins>Contact</ins>
 Feel free to reach out to me through:
-* [LinkedIn](https://linkedin.com/in/yourprofile)
-* [GitHub](https://github.com/yourusername)
-* Email: your.email@example.com
+* [LinkedIn](https://linkedin.com/in/edwin-gigi)
+* [GitHub](https://github.com/edwingigi)
+* Email: edwingigi2012@gmail.com
