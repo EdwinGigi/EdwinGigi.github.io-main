@@ -59,8 +59,12 @@ EdwinGigi.github.io/
 ├── _posts/         # Blog posts
 ├── assets/         # Static files (images, CSS, JS)
 ├── _config.yml     # Site configuration
-├── index.md        # Homepage
-└── projects.html   # Projects page
+├── index.md        # Homepage content
+├── index.html      # Homepage template
+├── projects.html   # Projects page
+├── 404.html        # Custom 404 page
+├── posts.md        # Posts listing page
+└── LICENSE         # License file
 ```
 
 ## 📝 Content Management
@@ -102,13 +106,13 @@ EdwinGigi.github.io/
 
 ## 🚀 Deployment
 
-The website is automatically deployed using GitHub Pages. Any changes pushed to the `master` branch will trigger a new deployment.
+The website is automatically deployed using GitHub Pages. Any changes pushed to the `main` branch will trigger a new deployment.
 
 1. **Make your changes locally**
    ```bash
    git add .
    git commit -m "Description of changes"
-   git push origin master
+   git push origin main
    ```
 
 2. **Wait for deployment**
