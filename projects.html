@@ -5,14 +5,14 @@ title: "Projects"
 <link rel="stylesheet" href="{{ "/assets/css/projects.css" | relative_url }}">
 
 <div class="container">
-    <h1 class="text-center mb-5 fade-in">Featured Projects</h1>
+    <h1 class="text-center mb-5">Featured Projects</h1>
     
     <!-- Text Summarizer Project -->
-    <div class="project-card fade-in" data-delay="0.2s">
+    <div class="project-card mb-5">
         <div class="row align-items-center">
             <div class="col-md-4">
                 <div class="project-image-container">
-                    <img src="{{ "/assets/images/youTubeIcon.png" | relative_url }}" class="img-fluid project-image" alt="Text Summarizer">
+                    <img src="{{ '/assets/images/text-summarizer.png' | relative_url }}" class="img-fluid project-image" alt="Text Summarizer">
                     <div class="project-image-overlay">
                         <div class="overlay-content">
                             <h3>View Demo</h3>
@@ -24,19 +24,55 @@ title: "Projects"
             <div class="col-md-8">
                 <h2 class="project-title">Text Summarizer</h2>
                 <p class="project-description">
-                    A sophisticated text summarization tool powered by AI that condenses lengthy articles and documents into concise summaries while maintaining key information and context.
+                    A sophisticated text summarization tool powered by AI that condenses lengthy articles and documents into concise summaries while maintaining key information and context. The project utilizes advanced NLP techniques and machine learning algorithms to generate accurate and coherent summaries.
                 </p>
-                <div class="tech-stack">
-                    <span class="tech-badge">Flask</span>
+                <div class="tech-stack mb-4">
                     <span class="tech-badge">Python</span>
+                    <span class="tech-badge">Flask</span>
                     <span class="tech-badge">NLP</span>
                     <span class="tech-badge">Machine Learning</span>
+                    <span class="tech-badge">NLTK</span>
                 </div>
-                <div class="project-links mt-4">
-                    <a href={% post_url 2022-06-01-Text-Summariser %} class="btn btn-primary">
-                        <i class="fas fa-code"></i> Development Details
+                <div class="project-links">
+                    <a href="https://github.com/EdwinGigi/TextSummariser" target="_blank" class="btn btn-primary">
+                        <i class="fab fa-github"></i> View on GitHub
                     </a>
-                    <a href="https://github.com/EdwinGigi/TextSummariser" target="_blank" class="btn btn-outline-primary">
+                    <a href="#" class="btn btn-outline-primary">
+                        <i class="fas fa-external-link-alt"></i> Live Demo
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Portfolio Website Project -->
+    <div class="project-card mb-5">
+        <div class="row align-items-center">
+            <div class="col-md-4">
+                <div class="project-image-container">
+                    <img src="{{ '/assets/images/portfolio.png' | relative_url }}" class="img-fluid project-image" alt="Portfolio Website">
+                    <div class="project-image-overlay">
+                        <div class="overlay-content">
+                            <h3>View Live</h3>
+                            <i class="fas fa-external-link-alt"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-8">
+                <h2 class="project-title">Portfolio Website</h2>
+                <p class="project-description">
+                    A modern, responsive portfolio website built with Jekyll and Bootstrap. Features include dark mode support, smooth animations, and a clean, professional design. The site showcases my projects, skills, and professional experience.
+                </p>
+                <div class="tech-stack mb-4">
+                    <span class="tech-badge">Jekyll</span>
+                    <span class="tech-badge">SCSS</span>
+                    <span class="tech-badge">Bootstrap</span>
+                    <span class="tech-badge">JavaScript</span>
+                    <span class="tech-badge">HTML5</span>
+                </div>
+                <div class="project-links">
+                    <a href="https://github.com/EdwinGigi/EdwinGigi.github.io" target="_blank" class="btn btn-primary">
                         <i class="fab fa-github"></i> View on GitHub
                     </a>
                 </div>
@@ -46,135 +82,14 @@ title: "Projects"
 </div>
 
 <style>
-.project-card {
-    background: rgba(255, 255, 255, 0.8);
-    backdrop-filter: blur(10px);
-    border-radius: 1rem;
-    padding: 2.5rem;
-    margin-bottom: 3rem;
-    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
-    border: 1px solid rgba(255, 255, 255, 0.2);
-    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
-    position: relative;
-    overflow: hidden;
-    transform-style: preserve-3d;
-    perspective: 1000px;
-}
-
-.project-card::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    height: 4px;
-    background: var(--gradient-primary);
-    transform: scaleX(0);
-    transform-origin: left;
-    transition: transform 0.4s ease;
-}
-
-.project-card:hover {
-    transform: translateY(-5px) scale(1.02);
-    box-shadow: 0 12px 40px rgba(0, 0, 0, 0.15);
-}
-
-.project-card:hover::before {
-    transform: scaleX(1);
-}
-
-.project-image-container {
-    position: relative;
-    border-radius: 1rem;
-    overflow: hidden;
-    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
-}
-
-.project-image {
-    border-radius: 1rem;
-    max-height: 250px;
-    object-fit: cover;
-    transition: transform 0.4s ease;
-}
-
-.project-image-overlay {
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background: rgba(37, 99, 235, 0.8);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    opacity: 0;
-    transition: opacity 0.4s ease;
-}
-
-.project-image-container:hover .project-image-overlay {
-    opacity: 1;
-}
-
-.project-image-container:hover .project-image {
-    transform: scale(1.1);
-}
-
-.overlay-content {
-    text-align: center;
-    color: white;
-}
-
-.overlay-content h3 {
-    margin-bottom: 1rem;
-    font-size: 1.5rem;
-}
-
-.overlay-content i {
-    font-size: 3rem;
-    animation: pulse 2s infinite;
-}
-
-.project-title {
-    color: var(--primary-color);
-    margin-bottom: 1rem;
-    font-weight: 700;
-    position: relative;
-    display: inline-block;
-}
-
-.project-title::after {
-    content: '';
-    position: absolute;
-    bottom: -5px;
-    left: 0;
-    width: 100%;
-    height: 2px;
-    background: var(--gradient-primary);
-    transform: scaleX(0);
-    transform-origin: left;
-    transition: transform 0.4s ease;
-}
-
-.project-card:hover .project-title::after {
-    transform: scaleX(1);
-}
-
-.project-description {
-    color: var(--text-light);
-    font-size: 1.1rem;
-    line-height: 1.6;
-    margin-bottom: 1.5rem;
-}
-
 .tech-stack {
     display: flex;
     flex-wrap: wrap;
     gap: 0.5rem;
-    margin-bottom: 1.5rem;
 }
 
 .tech-badge {
-    background: rgba(37, 99, 235, 0.1);
+    background: rgba(var(--primary-color), 0.1);
     color: var(--primary-color);
     padding: 0.5rem 1rem;
     border-radius: 0.5rem;
@@ -189,6 +104,85 @@ title: "Projects"
     transform: translateY(-2px);
 }
 
+.project-card {
+    background: var(--card-bg);
+    border-radius: 1rem;
+    padding: 2rem;
+    margin-bottom: 2rem;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+    border: 1px solid var(--border-color);
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.project-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 40px rgba(0, 0, 0, 0.15);
+}
+
+.project-image-container {
+    position: relative;
+    border-radius: 1rem;
+    overflow: hidden;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.project-image {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 1rem;
+    transition: transform 0.4s ease;
+}
+
+.project-image-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(37, 99, 235, 0.9);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    transition: opacity 0.4s ease;
+}
+
+.project-card:hover .project-image-overlay {
+    opacity: 1;
+}
+
+.project-card:hover .project-image {
+    transform: scale(1.1);
+}
+
+.overlay-content {
+    text-align: center;
+    color: white;
+}
+
+.overlay-content h3 {
+    margin-bottom: 0.5rem;
+    color: white;
+}
+
+.overlay-content i {
+    font-size: 2rem;
+}
+
+.project-title {
+    color: var(--primary-color);
+    margin-bottom: 1rem;
+    font-size: 2rem;
+}
+
+.project-description {
+    color: var(--text-light);
+    font-size: 1.1rem;
+    line-height: 1.6;
+    margin-bottom: 1.5rem;
+}
+
 .project-links {
     display: flex;
     gap: 1rem;
@@ -199,8 +193,6 @@ title: "Projects"
     border-radius: 0.5rem;
     font-weight: 500;
     transition: all 0.3s ease;
-    position: relative;
-    overflow: hidden;
 }
 
 .btn-primary {
@@ -227,55 +219,7 @@ title: "Projects"
     border-color: transparent;
 }
 
-.fade-in {
-    opacity: 0;
-    transform: translateY(20px);
-    transition: opacity 0.6s ease, transform 0.6s ease;
-}
-
-.fade-in.animate {
-    opacity: 1;
-    transform: translateY(0);
-}
-
-@keyframes pulse {
-    0% {
-        transform: scale(1);
-    }
-    50% {
-        transform: scale(1.2);
-    }
-    100% {
-        transform: scale(1);
-    }
-}
-
-.light-effect {
-    position: absolute;
-    width: 100px;
-    height: 100px;
-    background: radial-gradient(circle, rgba(255,255,255,0.8) 0%, rgba(255,255,255,0) 70%);
-    pointer-events: none;
-    opacity: 0;
-    animation: lightFade 1s ease-out;
-}
-
-@keyframes lightFade {
-    0% {
-        opacity: 0.5;
-        transform: scale(0.5);
-    }
-    100% {
-        opacity: 0;
-        transform: scale(2);
-    }
-}
-
 @media (max-width: 768px) {
-    .project-card {
-        padding: 1.5rem;
-    }
-    
     .project-links {
         flex-direction: column;
     }
