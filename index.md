@@ -6,12 +6,31 @@ title: "Edwin Gigi - Software Engineer"
 <div class="name-section" style="background-image: url('{{ "/assets/images/banner.jpg" | relative_url }}')">
     <div class="container">
         <div class="row justify-content-center">
-            <div class="col-12 text-center">
+            <div class="col-12 text-center mb-5">
                 <h1 class="display-4 fw-bold">Edwin Gigi</h1>
-                <p class="lead">Software Engineer | Machine Learning Enthusiast | Cloud Developer</p>
-                <button id="darkModeToggle" class="btn btn-link" aria-label="Toggle dark mode">
-                    <i class="fas fa-moon"></i>
-                </button>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-4 mb-4">
+                <div class="role-card">
+                    <i class="fas fa-code role-icon"></i>
+                    <h3>Software Engineer</h3>
+                    <p>Specializing in building scalable and efficient software solutions</p>
+                </div>
+            </div>
+            <div class="col-md-4 mb-4">
+                <div class="role-card">
+                    <i class="fas fa-layer-group role-icon"></i>
+                    <h3>Full Stack</h3>
+                    <p>Expertise in both frontend and backend development</p>
+                </div>
+            </div>
+            <div class="col-md-4 mb-4">
+                <div class="role-card">
+                    <i class="fas fa-envelope role-icon"></i>
+                    <h3>Contact</h3>
+                    <p>Let's work together on your next project</p>
+                </div>
             </div>
         </div>
     </div>
