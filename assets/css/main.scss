@@ -120,15 +120,18 @@ h1 {
 }
 
 .skill-category {
-    background: rgba(255, 255, 255, 0.8);
+    background: var(--card-bg);
     backdrop-filter: blur(10px);
     border-radius: 1rem;
     padding: 1.5rem;
     transform-style: preserve-3d;
     transition: transform 0.4s ease;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+    border: 1px solid var(--border-color);
     
     &:hover {
         transform: rotateY(5deg) rotateX(5deg);
+        box-shadow: 0 12px 40px rgba(0, 0, 0, 0.15);
     }
     
     h3 {
@@ -166,12 +169,13 @@ h1 {
     transition: all 0.3s ease;
     
     &:hover {
-        background: rgba(37, 99, 235, 0.1);
+        background: rgba(var(--primary-color), 0.1);
         transform: translateX(5px);
     }
     
     .skill-name {
         font-weight: 500;
+        color: var(--text-color);
     }
     
     .skill-stars {
@@ -479,6 +483,22 @@ h1 {
         &:hover {
             background: var(--gradient-primary);
             color: var(--card-bg);
+        }
+    }
+    
+    .skill-category {
+        background: var(--card-bg);
+        border-color: var(--border-color);
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+    }
+    
+    .skill-item {
+        &:hover {
+            background: rgba(var(--primary-color), 0.2);
+        }
+        
+        .skill-name {
+            color: var(--text-color);
         }
     }
 }
