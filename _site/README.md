@@ -40,6 +40,7 @@ Visit the live website at: [edwingigi.github.io](https://edwingigi.github.io)
 - JavaScript - Interactivity and animations
 - Font Awesome - Icons
 - GitHub Pages - Hosting
+- Listen - File system monitoring for Windows compatibility
 
 ## 🚀 Setup and Development
 
@@ -91,6 +92,7 @@ Visit the live website at: [edwingigi.github.io](https://edwingigi.github.io)
 │   ├── js/           # JavaScript files
 │   └── images/       # Images and icons
 ├── _config.yml        # Jekyll configuration
+├── Gemfile           # Ruby dependencies
 └── index.md          # Homepage content
 ```
 
@@ -98,39 +100,34 @@ Visit the live website at: [edwingigi.github.io](https://edwingigi.github.io)
 
 1. **Colors and Themes**
    - Edit `_sass/_variables.scss` to modify the color scheme
-   - Update dark mode colors in the same file
+   - Customize dark mode colors in `_sass/_dark-mode.scss`
 
-2. **Content**
-   - Modify `index.md` for the main content
-   - Update project information in `projects.html`
-   - Edit experience details in the experience section
+2. **Content Management**
+   - Add new projects in `_posts/` directory
+   - Update experience in `_data/experience.yml`
+   - Modify skills in `_data/skills.yml`
 
-3. **Styling**
-   - Main styles are in `assets/css/main.scss`
-   - Component-specific styles in `_sass/` directory
+## 🔧 Dependencies
 
-## 📱 Responsive Design
+The project uses the following key Ruby gems:
+- jekyll (~> 4.3.2)
+- jekyll-sass-converter (~> 3.0)
+- jekyll-feed (~> 0.12)
+- jekyll-seo-tag (~> 2.8)
+- jekyll-paginate (~> 1.1)
+- listen (~> 3.8.0) - For Windows file system monitoring
 
-- Mobile-first approach
-- Breakpoints for different screen sizes
-- Optimized images and assets
-- Collapsible navigation for mobile devices
+## 📝 Contributing
 
-## 🔄 Updates and Maintenance
-
-1. **Keeping Dependencies Updated**
-   ```bash
-   bundle update
-   ```
-
-2. **Adding New Content**
-   - Create new project cards in `projects.html`
-   - Update experience section as needed
-   - Add new skills or technologies
+1. Fork the repository
+2. Create your feature branch (`git checkout -b feature/AmazingFeature`)
+3. Commit your changes (`git commit -m 'Add some AmazingFeature'`)
+4. Push to the branch (`git push origin feature/AmazingFeature`)
+5. Open a Pull Request
 
 ## 📄 License
 
-This project is open source and available under the [MIT License](LICENSE).
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
 
 ## 📞 Contact
 
@@ -140,6 +137,7 @@ This project is open source and available under the [MIT License](LICENSE).
 
 ## 🙏 Acknowledgments
 
-- Jekyll theme inspiration
-- Bootstrap for the responsive design
-- GitHub Pages for hosting 
+- Jekyll team for the amazing static site generator
+- Bootstrap team for the frontend framework
+- Font Awesome for the icons
+- All contributors and supporters
