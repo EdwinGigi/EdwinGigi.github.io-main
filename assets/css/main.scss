@@ -514,3 +514,56 @@ h1 {
         }
     }
 }
+
+// Name section styles
+.name-section {
+    padding: 4rem 0;
+    text-align: center;
+    
+    h1 {
+        font-size: 3.5rem;
+        font-weight: 700;
+        margin-bottom: 1rem;
+        background: var(--gradient-primary);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
+        text-fill-color: transparent;
+    }
+    
+    p {
+        font-size: 1.25rem;
+        color: var(--text-light);
+        margin-bottom: 2rem;
+    }
+}
+
+#darkModeToggle {
+    font-size: 1.5rem;
+    color: var(--text-color);
+    background: none;
+    border: none;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    padding: 0.5rem;
+    border-radius: 50%;
+    
+    &:hover {
+        color: var(--primary-color);
+        transform: rotate(15deg);
+    }
+    
+    i {
+        transition: all 0.3s ease;
+    }
+}
+
+[data-theme="dark"] {
+    #darkModeToggle {
+        color: var(--text-color);
+        
+        &:hover {
+            color: var(--primary-color);
+        }
+    }
+}
