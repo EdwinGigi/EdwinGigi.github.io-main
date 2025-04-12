@@ -1,13 +1,13 @@
 ---
-# Only the main Sass file needs front matter (the dashes are enough)
----
+@charset "utf-8";
 
+// Import core styles
 @import "variables";
 @import "base";
 @import "layout";
 @import "components";
 
-// CSS Variables for light mode
+// Root variables for light mode
 :root {
     --primary-color: #{$primary-color};
     --secondary-color: #{$secondary-color};
@@ -437,23 +437,135 @@ h1 {
 
 // Dark mode specific styles
 [data-theme="dark"] {
-    .card, .role-card, .skill-category, .experience-item, .project-card {
+    body {
+        background-image: 
+            radial-gradient(circle at 100% 0%, rgba(96, 165, 250, 0.1) 0%, transparent 50%),
+            radial-gradient(circle at 0% 100%, rgba(59, 130, 246, 0.1) 0%, transparent 50%);
+    }
+    
+    .card {
         background: var(--dark-card-bg);
         border-color: var(--dark-border-color);
         box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+
+        .card-title {
+            color: var(--dark-primary-color);
+        }
+
+        .card-text {
+            color: var(--dark-text-color);
+            opacity: 1;
+        }
 
         h2, h3 {
             color: var(--dark-primary-color);
         }
 
-        p, li, .card-text {
+        p, li {
             color: var(--dark-text-color);
-            opacity: 0.95;
+            opacity: 1;
+        }
+    }
+    
+    .project-card {
+        background: var(--dark-card-bg);
+        border-color: var(--dark-border-color);
+
+        .project-title {
+            color: var(--dark-primary-color);
         }
 
-        .date, .text-light {
+        .project-description {
+            color: var(--dark-text-color);
+        }
+    }
+    
+    .tech-badge {
+        background: rgba(var(--primary-color), 0.1);
+        color: var(--primary-color);
+        
+        &:hover {
+            background: var(--primary-color);
+            color: var(--card-bg);
+        }
+    }
+    
+    .btn-outline-primary {
+        border-color: var(--primary-color);
+        color: var(--primary-color);
+        
+        &:hover {
+            background: var(--gradient-primary);
+            color: var(--card-bg);
+        }
+    }
+    
+    .experience-item {
+        background: var(--dark-card-bg);
+        border-color: var(--dark-border-color);
+
+        .company {
+            color: var(--dark-primary-color);
+        }
+
+        .date {
             color: var(--dark-text-light);
-            opacity: 0.8;
+        }
+
+        ul li {
+            color: var(--dark-text-color);
+        }
+    }
+    
+    .skill-bar {
+        background: rgba(var(--primary-color), 0.1);
+        
+        &::after {
+            background: var(--gradient-primary);
+        }
+    }
+    
+    .contact-links a {
+        border-color: var(--primary-color);
+        color: var(--primary-color);
+        
+        &:hover {
+            background: var(--gradient-primary);
+            color: var(--card-bg);
+        }
+    }
+    
+    .skill-category {
+        background: var(--dark-card-bg);
+        border-color: var(--dark-border-color);
+
+        h3 {
+            color: var(--dark-primary-color);
+        }
+
+        .skill-item {
+            .skill-name {
+                color: var(--dark-text-color);
+            }
+
+            &:hover {
+                background: rgba(96, 165, 250, 0.1);
+            }
+        }
+    }
+    
+    .role-card {
+        background: var(--dark-card-bg);
+        border-color: var(--dark-border-color);
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+
+        h3 {
+            color: var(--dark-primary-color);
+        }
+
+        p {
+            color: var(--dark-text-color);
+            opacity: 1;
         }
 
         i {
@@ -463,46 +575,6 @@ h1 {
         &:hover {
             box-shadow: 0 8px 15px rgba(0, 0, 0, 0.4);
         }
-    }
-
-    .skill-item {
-        .skill-name {
-            color: var(--dark-text-color);
-        }
-
-        &:hover {
-            background: rgba(96, 165, 250, 0.1);
-        }
-    }
-
-    .about-section {
-        .card {
-            .card-title {
-                color: var(--dark-primary-color);
-            }
-
-            .card-text {
-                color: var(--dark-text-color);
-                opacity: 0.95;
-            }
-        }
-    }
-
-    .experience-item {
-        ul li {
-            color: var(--dark-text-color);
-            opacity: 0.95;
-
-            &:hover {
-                background: rgba(96, 165, 250, 0.1);
-            }
-        }
-    }
-
-    body {
-        background-image: 
-            radial-gradient(circle at 100% 0%, rgba(96, 165, 250, 0.1) 0%, transparent 50%),
-            radial-gradient(circle at 0% 100%, rgba(59, 130, 246, 0.1) 0%, transparent 50%);
     }
 }
 
@@ -752,9 +824,8 @@ h1 {
 
             .card-text {
                 color: var(--dark-text-color);
-                opacity: 0.95;
+                opacity: 1;
             }
         }
     }
-}
 }
