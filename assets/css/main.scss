@@ -756,10 +756,10 @@ h1 {
         }
 
         .card-text {
-            color: var(--text-color);
+            color: var(--primary-color);
             font-size: 1.2rem;
             line-height: 1.8;
-            opacity: 0.95;
+            opacity: 0.85;
         }
     }
 }
@@ -775,7 +775,8 @@ h1 {
             }
 
             .card-text {
-                color: var(--dark-text-color);
+                color: var(--dark-primary-color);
+                opacity: 0.85;
             }
         }
     }
