@@ -437,96 +437,72 @@ h1 {
 
 // Dark mode specific styles
 [data-theme="dark"] {
-    body {
-        background-image: 
-            radial-gradient(circle at 100% 0%, rgba(96, 165, 250, 0.1) 0%, transparent 50%),
-            radial-gradient(circle at 0% 100%, rgba(59, 130, 246, 0.1) 0%, transparent 50%);
-    }
-    
-    .card {
-        background: rgba(var(--card-bg), 0.8);
-        border-color: var(--border-color);
-        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
-    }
-    
-    .project-card {
-        background: rgba(var(--card-bg), 0.8);
-        border-color: var(--border-color);
-    }
-    
-    .tech-badge {
-        background: rgba(var(--primary-color), 0.1);
-        color: var(--primary-color);
-        
-        &:hover {
-            background: var(--primary-color);
-            color: var(--card-bg);
-        }
-    }
-    
-    .btn-outline-primary {
-        border-color: var(--primary-color);
-        color: var(--primary-color);
-        
-        &:hover {
-            background: var(--gradient-primary);
-            color: var(--card-bg);
-        }
-    }
-    
-    .experience-item {
-        border-left-color: var(--primary-color);
-    }
-    
-    .skill-bar {
-        background: rgba(var(--primary-color), 0.1);
-        
-        &::after {
-            background: var(--gradient-primary);
-        }
-    }
-    
-    .contact-links a {
-        border-color: var(--primary-color);
-        color: var(--primary-color);
-        
-        &:hover {
-            background: var(--gradient-primary);
-            color: var(--card-bg);
-        }
-    }
-    
-    .skill-category {
-        background: var(--card-bg);
-        border-color: var(--border-color);
-        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
-    }
-    
-    .skill-item {
-        &:hover {
-            background: rgba(var(--primary-color), 0.2);
-        }
-        
-        .skill-name {
-            color: var(--text-color);
-        }
-    }
-    
-    .role-card {
+    .card, .role-card, .skill-category, .experience-item, .project-card {
         background: var(--dark-card-bg);
         border-color: var(--dark-border-color);
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
 
-        h3 {
+        h2, h3 {
             color: var(--dark-primary-color);
         }
 
-        p {
+        p, li, .card-text {
             color: var(--dark-text-color);
+            opacity: 0.95;
+        }
+
+        .date, .text-light {
+            color: var(--dark-text-light);
+            opacity: 0.8;
         }
 
         i {
             color: var(--dark-primary-color);
         }
+
+        &:hover {
+            box-shadow: 0 8px 15px rgba(0, 0, 0, 0.4);
+        }
+    }
+
+    .skill-item {
+        .skill-name {
+            color: var(--dark-text-color);
+        }
+
+        &:hover {
+            background: rgba(96, 165, 250, 0.1);
+        }
+    }
+
+    .about-section {
+        .card {
+            .card-title {
+                color: var(--dark-primary-color);
+            }
+
+            .card-text {
+                color: var(--dark-text-color);
+                opacity: 0.95;
+            }
+        }
+    }
+
+    .experience-item {
+        ul li {
+            color: var(--dark-text-color);
+            opacity: 0.95;
+
+            &:hover {
+                background: rgba(96, 165, 250, 0.1);
+            }
+        }
+    }
+
+    body {
+        background-image: 
+            radial-gradient(circle at 100% 0%, rgba(96, 165, 250, 0.1) 0%, transparent 50%),
+            radial-gradient(circle at 0% 100%, rgba(59, 130, 246, 0.1) 0%, transparent 50%);
     }
 }
 
@@ -775,9 +751,10 @@ h1 {
             }
 
             .card-text {
-                color: var(--dark-primary-color);
-                opacity: 0.85;
+                color: var(--dark-text-color);
+                opacity: 0.95;
             }
         }
     }
+}
 }
