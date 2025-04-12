@@ -29,18 +29,6 @@
         font-weight: 600;
         color: $primary-color;
         position: relative;
-        
-        &::before {
-            content: '';
-            position: absolute;
-            left: -2rem;
-            top: 50%;
-            transform: translateY(-50%);
-            width: 12px;
-            height: 12px;
-            border-radius: 50%;
-            background: $gradient-primary;
-        }
     }
 }
 
