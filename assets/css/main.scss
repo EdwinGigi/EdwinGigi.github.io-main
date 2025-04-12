@@ -308,3 +308,132 @@ h1 {
         flex-direction: column;
     }
 }
+
+// Project-specific styles
+.project-card {
+    @extend .card;
+    
+    .project-image-container {
+        position: relative;
+        border-radius: 1rem;
+        overflow: hidden;
+        box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+    }
+    
+    .project-image {
+        border-radius: 1rem;
+        max-height: 250px;
+        object-fit: cover;
+        transition: transform 0.4s ease;
+    }
+    
+    .project-image-overlay {
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: rgba(37, 99, 235, 0.8);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        opacity: 0;
+        transition: opacity 0.4s ease;
+    }
+    
+    &:hover {
+        .project-image-overlay {
+            opacity: 1;
+        }
+        
+        .project-image {
+            transform: scale(1.1);
+        }
+    }
+}
+
+.overlay-content {
+    text-align: center;
+    color: white;
+    
+    h3 {
+        margin-bottom: 1rem;
+        font-size: 1.5rem;
+    }
+    
+    i {
+        font-size: 3rem;
+        animation: pulse 2s infinite;
+    }
+}
+
+.project-title {
+    color: $primary-color;
+    margin-bottom: 1rem;
+    font-weight: 700;
+    position: relative;
+    display: inline-block;
+    
+    &::after {
+        content: '';
+        position: absolute;
+        bottom: -5px;
+        left: 0;
+        width: 100%;
+        height: 2px;
+        background: $gradient-primary;
+        transform: scaleX(0);
+        transform-origin: left;
+        transition: transform 0.4s ease;
+    }
+    
+    .project-card:hover &::after {
+        transform: scaleX(1);
+    }
+}
+
+.project-description {
+    color: $text-light;
+    font-size: 1.1rem;
+    line-height: 1.6;
+    margin-bottom: 1.5rem;
+}
+
+.project-links {
+    display: flex;
+    gap: 1rem;
+}
+
+// Animations
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.2);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+.light-effect {
+    position: absolute;
+    width: 100px;
+    height: 100px;
+    background: radial-gradient(circle, rgba(255,255,255,0.8) 0%, rgba(255,255,255,0) 70%);
+    pointer-events: none;
+    opacity: 0;
+    animation: lightFade 1s ease-out;
+}
+
+@keyframes lightFade {
+    0% {
+        opacity: 0.5;
+        transform: scale(0.5);
+    }
+    100% {
+        opacity: 0;
+        transform: scale(2);
+    }
+}
