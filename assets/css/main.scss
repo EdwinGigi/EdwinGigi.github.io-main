@@ -613,39 +613,44 @@ h1 {
 
 // Role cards on banner
 .role-card {
-    background: rgba(255, 255, 255, 0.95);
-    backdrop-filter: blur(10px);
+    background: var(--card-bg);
     border-radius: 1rem;
     padding: 2rem;
     text-align: center;
     transition: all 0.3s ease;
-    border: 1px solid rgba(255, 255, 255, 0.2);
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     height: 100%;
-    
-    &:hover {
-        transform: translateY(-5px);
-        box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    border: 1px solid var(--border-color);
+
+    h3 {
+        color: var(--primary-color);
+        margin: 1rem 0;
+        font-size: 1.5rem;
     }
-    
-    .role-icon {
-        font-size: 2.5rem;
+
+    p {
+        color: var(--text-color);
+        margin-bottom: 0;
+        font-size: 1rem;
+        line-height: 1.5;
+    }
+
+    i {
+        font-size: 2rem;
         color: var(--primary-color);
         margin-bottom: 1rem;
     }
-    
-    h3 {
-        color: var(--text-color);
-        font-size: 1.5rem;
-        margin-bottom: 1rem;
-        font-weight: 600;
+
+    &:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
     }
-    
-    p {
-        color: var(--text-light);
-        font-size: 1rem;
-        margin-bottom: 0;
-    }
+}
+
+.card-text {
+    color: var(--text-color);
+    font-size: 1.1rem;
+    line-height: 1.6;
 }
 
 // Updated navbar styles
