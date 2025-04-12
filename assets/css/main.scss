@@ -1,17 +1,11 @@
 ---
-# Only the main Sass file needs front matter (the dashes are enough)
-@charset "utf-8";
 ---
 
-$enable-important-utilities: true;
-
-// Import core styles
 @import "variables";
 @import "base";
 @import "layout";
 @import "components";
 
-/* Root variables */
 :root {
     --primary-color: #{$primary-color};
     --secondary-color: #{$secondary-color};
@@ -186,6 +180,7 @@ h1 {
     font-size: 3.5rem;
     background: var(--gradient-primary);
     -webkit-background-clip: text;
+    background-clip: text;
     -webkit-text-fill-color: transparent;
     animation: gradientShift 8s ease infinite;
     background-size: 200% 200%;
