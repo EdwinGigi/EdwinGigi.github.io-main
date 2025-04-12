@@ -1,7 +1,7 @@
 ---
+# Only the main Sass file needs front matter (the dashes are enough)
 ---
 
-// Import partials from `sass_dir` (defaults to `_sass`)
 @import "variables";
 @import "base";
 @import "layout";
@@ -46,6 +46,8 @@ body {
     overflow-x: hidden;
     transition: background-color 0.3s ease, color 0.3s ease;
     min-height: 100vh;
+    margin: 0;
+    padding: 0;
 }
 
 // Modern typography with gradient text
@@ -505,19 +507,20 @@ h1 {
 
 // Name section styles
 .name-section {
-    width: 100%;
-    min-height: 100vh;
+    width: 100vw;
+    height: 100vh;
+    position: relative;
+    overflow: hidden;
+    margin: 0;
+    padding: 0;
     display: flex;
     align-items: center;
     justify-content: center;
-    text-align: center;
     background-image: url('../images/banner.jpg');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
     background-attachment: fixed;
-    position: relative;
-    margin-bottom: 4rem;
     
     &::before {
         content: '';
@@ -534,6 +537,8 @@ h1 {
         position: relative;
         z-index: 2;
         padding: 2rem;
+        max-width: 1200px;
+        margin: 0 auto;
     }
     
     h1 {
