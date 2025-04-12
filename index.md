@@ -32,33 +32,41 @@ title: "Edwin Gigi - Software Engineer"
     </div>
 </div>
 
-<section class="experience-section mb-5">
-    <h2>Experience</h2>
-    
-    <div class="experience-item card">
-        <h3 class="company">Software Engineer - Darktrace</h3>
-        <p class="date">2022 – Present</p>
-        <ul>
-            <li>Leading development of scalable web applications using modern tech stack</li>
-            <li>Implementing microservices architecture and CI/CD pipelines</li>
-            <li>Collaborating with cross-functional teams to deliver high-quality software</li>
-            <li>Mentoring junior developers and conducting code reviews</li>
-        </ul>
-    </div>
+<div class="container">
+    <div class="row">
+        <div class="col-12">
+            <div class="card mb-4">
+                <div class="card-body">
+                    <h2 class="card-title">Experience</h2>
+                    
+                    <div class="experience-item">
+                        <h3 class="company">Software Engineer - Darktrace</h3>
+                        <p class="date">2022 – Present</p>
+                        <ul>
+                            <li>Leading development of scalable web applications using modern tech stack</li>
+                            <li>Implementing microservices architecture and CI/CD pipelines</li>
+                            <li>Collaborating with cross-functional teams to deliver high-quality software</li>
+                            <li>Mentoring junior developers and conducting code reviews</li>
+                        </ul>
+                    </div>
 
-    <div class="experience-item card">
-        <h3 class="company">Warehouse Control Solutions - Software Developer</h3>
-        <p class="date">08/2019 – 09/2020</p>
-        <ul>
-            <li>Designed and trained CNNs using TensorFlow, achieving high accuracy for healthcare applications</li>
-            <li>Developed Python GUI for data labeling and processing</li>
-            <li>Implemented OpenVino technology for real-time human pose estimation</li>
-            <li>Built threaded data capture system on Raspberry Pi</li>
-            <li>Developed RESTful API using Flask with JWT authentication</li>
-            <li>Created responsive web interfaces using Bootstrap and jQuery</li>
-        </ul>
+                    <div class="experience-item">
+                        <h3 class="company">Warehouse Control Solutions - Software Developer</h3>
+                        <p class="date">08/2019 – 09/2020</p>
+                        <ul>
+                            <li>Designed and trained CNNs using TensorFlow, achieving high accuracy for healthcare applications</li>
+                            <li>Developed Python GUI for data labeling and processing</li>
+                            <li>Implemented OpenVino technology for real-time human pose estimation</li>
+                            <li>Built threaded data capture system on Raspberry Pi</li>
+                            <li>Developed RESTful API using Flask with JWT authentication</li>
+                            <li>Created responsive web interfaces using Bootstrap and jQuery</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
-</section>
+</div>
 
 <section class="education-section card mb-5">
     <h2>Education</h2>
