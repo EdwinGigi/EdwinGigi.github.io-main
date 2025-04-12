@@ -521,6 +521,28 @@ h1 {
             color: var(--text-color);
         }
     }
+    
+    .role-card {
+        background: rgba(31, 41, 55, 0.95);
+        border: 1px solid rgba(255, 255, 255, 0.1);
+        
+        &:hover {
+            background: rgba(31, 41, 55, 0.98);
+            border-color: rgba(255, 255, 255, 0.2);
+        }
+        
+        h3 {
+            color: rgba(255, 255, 255, 0.95);
+        }
+        
+        p {
+            color: rgba(255, 255, 255, 0.7);
+        }
+        
+        .role-icon {
+            color: var(--dark-primary-color);
+        }
+    }
 }
 
 // Name section styles
@@ -594,7 +616,7 @@ h1 {
 
 // Role cards on banner
 .role-card {
-    background: rgba(255, 255, 255, 0.9);
+    background: rgba(255, 255, 255, 0.95);
     backdrop-filter: blur(10px);
     border-radius: 1rem;
     padding: 2rem;
@@ -607,7 +629,6 @@ h1 {
     &:hover {
         transform: translateY(-5px);
         box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
-        background: rgba(255, 255, 255, 0.95);
     }
     
     .role-icon {
