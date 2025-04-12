@@ -6,6 +6,20 @@ title: "Edwin Gigi - Software Engineer"
 <div class="name-section" style="background-image: url('{{ "/assets/images/banner.jpg" | relative_url }}')">
     <div class="container">
         <div class="row">
+            <div class="col-12">
+                <div class="card mb-4">
+                    <div class="card-body">
+                        <h2 class="card-title">About Me</h2>
+                        <p class="card-text">
+                            I am a passionate software engineer with expertise in full-stack development, machine learning, and cloud technologies. 
+                            My journey in technology began with a fascination for solving complex problems and has evolved into a career 
+                            focused on creating innovative solutions that make a real impact.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
             <div class="col-md-4 mb-4">
                 <div class="role-card">
                     <i class="fas fa-code role-icon"></i>
@@ -25,23 +39,6 @@ title: "Edwin Gigi - Software Engineer"
                     <i class="fas fa-envelope role-icon"></i>
                     <h3>Contact</h3>
                     <p>Let's work together on your next project</p>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
-
-<div class="container">
-    <div class="row">
-        <div class="col-12">
-            <div class="card mb-4">
-                <div class="card-body">
-                    <h2 class="card-title">About Me</h2>
-                    <p class="card-text">
-                        I am a passionate software engineer with expertise in full-stack development, machine learning, and cloud technologies. 
-                        My journey in technology began with a fascination for solving complex problems and has evolved into a career 
-                        focused on creating innovative solutions that make a real impact.
-                    </p>
                 </div>
             </div>
         </div>
