@@ -1,6 +1,32 @@
 # Edwin Gigi - Portfolio Website
 
-A modern, responsive portfolio website built with Jekyll and GitHub Pages. This website showcases my professional experience, projects, and technical skills.
+A modern, responsive portfolio website built with Jekyll and Bootstrap, showcasing my projects and professional experience.
+
+## 🌟 Features
+
+- **Modern Design**
+  - Clean and professional layout
+  - Responsive design that works on all devices
+  - Smooth animations and transitions
+  - Modern card-based UI components
+
+- **Dark Mode Support**
+  - Automatic theme detection
+  - Manual theme toggle
+  - Persistent theme preference
+  - Smooth theme transitions
+
+- **Project Showcase**
+  - Featured projects with detailed descriptions
+  - Technology stack badges
+  - Project screenshots with hover effects
+  - Links to live demos and GitHub repositories
+
+- **Professional Experience**
+  - Timeline of work experience
+  - Educational background
+  - Technical skills showcase
+  - Achievements and certifications
 
 ## 🌐 Live Website
 
@@ -9,149 +35,108 @@ Visit the live website at: [edwingigi.github.io](https://edwingigi.github.io)
 ## 🛠️ Technologies Used
 
 - Jekyll - Static site generator
-- HTML5 & CSS3
-- Bootstrap - Frontend framework
-- GitHub Pages - Hosting
+- SCSS - Advanced styling
+- Bootstrap 5 - Frontend framework
+- JavaScript - Interactivity and animations
 - Font Awesome - Icons
-- Markdown - Content formatting
+- GitHub Pages - Hosting
 
-## 🚀 Local Development Setup
+## 🚀 Setup and Development
 
-### Prerequisites
-
-1. Ruby (version 2.5.0 or higher)
-2. RubyGems
-3. GCC and Make
-
-### Installation
-
-1. **Clone the repository**
+1. **Prerequisites**
    ```bash
-   git clone https://github.com/EdwinGigi/EdwinGigi.github.io.git
-   cd EdwinGigi.github.io
-   ```
+   # Install Ruby (if not already installed)
+   # For Windows, download from https://rubyinstaller.org/
+   # For macOS/Linux:
+   brew install ruby # macOS
+   sudo apt-get install ruby-full # Ubuntu
 
-2. **Install Jekyll and Bundler**
-   ```bash
+   # Install Jekyll and Bundler
    gem install jekyll bundler
    ```
 
-3. **Install dependencies**
+2. **Installation**
    ```bash
+   # Clone the repository
+   git clone https://github.com/EdwinGigi/EdwinGigi.github.io.git
+   cd EdwinGigi.github.io
+
+   # Install dependencies
    bundle install
    ```
 
-4. **Run the development server**
+3. **Local Development**
    ```bash
+   # Start the development server
    bundle exec jekyll serve
+
+   # Visit http://localhost:4000 in your browser
    ```
 
-5. **View the site**
-   Open your browser and navigate to `http://localhost:4000`
-
-## 📁 Project Structure
-
-```
-EdwinGigi.github.io/
-├── _data/          # Site data files
-├── _includes/      # Reusable components
-├── _layouts/       # Page templates
-├── _posts/         # Blog posts
-├── assets/         # Static files (images, CSS, JS)
-├── _config.yml     # Site configuration
-├── index.md        # Homepage content
-├── index.html      # Homepage template
-├── projects.html   # Projects page
-├── 404.html        # Custom 404 page
-├── posts.md        # Posts listing page
-└── LICENSE         # License file
-```
-
-## 📝 Content Management
-
-### Adding a New Project
-
-1. Open `projects.html`
-2. Add a new project card following the existing format:
-   ```html
-   <div class="project-card">
-     <div class="row align-items-center">
-       <div class="col-md-4">
-         <img src="{{ "/assets/images/project-image.jpg" | relative_url }}" class="img-fluid project-image" alt="Project Name">
-       </div>
-       <div class="col-md-8">
-         <h2>Project Name</h2>
-         <p class="project-description">
-           Project description goes here.
-         </p>
-         <div class="tech-stack">
-           <span class="badge badge-primary">Technology 1</span>
-           <span class="badge badge-primary">Technology 2</span>
-         </div>
-         <div class="project-links mt-3">
-           <a href="#" class="btn btn-primary mr-2">
-             <i class="fas fa-code"></i> View Code
-           </a>
-         </div>
-       </div>
-     </div>
-   </div>
-   ```
-
-### Updating Experience
-
-1. Open `index.md`
-2. Modify the experience section following the existing format
-3. Commit and push your changes
-
-## 🚀 Deployment
-
-The website is automatically deployed using GitHub Pages. Any changes pushed to the `main` branch will trigger a new deployment.
-
-1. **Make your changes locally**
+4. **Building for Production**
    ```bash
-   git add .
-   git commit -m "Description of changes"
-   git push origin main
+   # Build the site
+   bundle exec jekyll build
    ```
 
-2. **Wait for deployment**
-   - GitHub Pages will automatically build and deploy your site
-   - This usually takes 1-3 minutes
-   - You can check the status in your repository's "Actions" tab
+## 📂 Project Structure
+
+```
+.
+├── _includes/          # Reusable components
+├── _layouts/           # Page templates
+├── _sass/             # SCSS partials
+├── assets/            # Static assets
+│   ├── css/          # Compiled CSS
+│   ├── js/           # JavaScript files
+│   └── images/       # Images and icons
+├── _config.yml        # Jekyll configuration
+└── index.md          # Homepage content
+```
 
 ## 🎨 Customization
 
-### Changing Colors
+1. **Colors and Themes**
+   - Edit `_sass/_variables.scss` to modify the color scheme
+   - Update dark mode colors in the same file
 
-The site uses Bootstrap's default color scheme. To customize:
+2. **Content**
+   - Modify `index.md` for the main content
+   - Update project information in `projects.html`
+   - Edit experience details in the experience section
 
-1. Create a new CSS file in `assets/css/`
-2. Add your custom styles
-3. Link the CSS file in `_includes/head.html`
+3. **Styling**
+   - Main styles are in `assets/css/main.scss`
+   - Component-specific styles in `_sass/` directory
 
-### Adding New Pages
+## 📱 Responsive Design
 
-1. Create a new `.md` or `.html` file in the root directory
-2. Add the front matter:
-   ```yaml
-   ---
-   layout: default
-   title: "Page Title"
-   ---
+- Mobile-first approach
+- Breakpoints for different screen sizes
+- Optimized images and assets
+- Collapsible navigation for mobile devices
+
+## 🔄 Updates and Maintenance
+
+1. **Keeping Dependencies Updated**
+   ```bash
+   bundle update
    ```
-3. Add your content
-4. The page will be accessible at `/page-name`
+
+2. **Adding New Content**
+   - Create new project cards in `projects.html`
+   - Update experience section as needed
+   - Add new skills or technologies
 
 ## 📄 License
 
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+This project is open source and available under the [MIT License](LICENSE).
 
 ## 📞 Contact
 
-Feel free to reach out if you have any questions or suggestions:
 - GitHub: [@EdwinGigi](https://github.com/EdwinGigi)
-- LinkedIn: [@edwin-gigi](https://www.linkedin.com/in/edwin-gigi/)
+- LinkedIn: [Edwin Gigi](https://linkedin.com/in/edwin-gigi)
+- Email: edwingigi2012@gmail.com
 
 ## 🙏 Acknowledgments
 
