@@ -756,7 +756,7 @@ h1 {
         }
 
         .card-text {
-            color: #000000;
+            color: var(--text-color);
             font-size: 1.2rem;
             line-height: 1.8;
             opacity: 0.95;
