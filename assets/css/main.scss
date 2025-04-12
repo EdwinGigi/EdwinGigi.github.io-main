@@ -520,23 +520,18 @@ h1 {
     }
     
     .role-card {
-        background: rgba(31, 41, 55, 0.95);
-        border: 1px solid rgba(255, 255, 255, 0.1);
-        
-        &:hover {
-            background: rgba(31, 41, 55, 0.98);
-            border-color: rgba(255, 255, 255, 0.2);
-        }
-        
+        background: var(--dark-card-bg);
+        border-color: var(--dark-border-color);
+
         h3 {
-            color: rgba(255, 255, 255, 0.95);
+            color: var(--dark-primary-color);
         }
-        
+
         p {
-            color: rgba(255, 255, 255, 0.7);
+            color: var(--dark-text-color);
         }
-        
-        .role-icon {
+
+        i {
             color: var(--dark-primary-color);
         }
     }
@@ -615,30 +610,33 @@ h1 {
 .role-card {
     background: var(--card-bg);
     border-radius: 1rem;
-    padding: 2rem;
+    padding: 2.5rem 2rem;
     text-align: center;
     transition: all 0.3s ease;
     height: 100%;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     border: 1px solid var(--border-color);
+    margin-bottom: 1.5rem;
 
     h3 {
         color: var(--primary-color);
-        margin: 1rem 0;
-        font-size: 1.5rem;
+        margin: 1.25rem 0;
+        font-size: 1.75rem;
+        font-weight: 600;
     }
 
     p {
         color: var(--text-color);
         margin-bottom: 0;
-        font-size: 1rem;
-        line-height: 1.5;
+        font-size: 1.1rem;
+        line-height: 1.6;
+        opacity: 0.9;
     }
 
     i {
-        font-size: 2rem;
+        font-size: 2.5rem;
         color: var(--primary-color);
-        margin-bottom: 1rem;
+        margin-bottom: 1.25rem;
     }
 
     &:hover {
@@ -742,6 +740,49 @@ h1 {
             
             &::after {
                 bottom: 6px;
+            }
+        }
+    }
+}
+
+// About Me section
+.about-section {
+    padding: 4rem 0;
+    background: var(--background-color);
+
+    .card {
+        border: none;
+        background: var(--card-bg);
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+
+        .card-title {
+            color: var(--primary-color);
+            font-size: 2.25rem;
+            font-weight: 700;
+            margin-bottom: 1.5rem;
+        }
+
+        .card-text {
+            color: var(--text-color);
+            font-size: 1.2rem;
+            line-height: 1.8;
+            opacity: 0.95;
+        }
+    }
+}
+
+// Dark mode specific overrides
+[data-theme="dark"] {
+    .about-section {
+        .card {
+            background: var(--dark-card-bg);
+
+            .card-title {
+                color: var(--dark-primary-color);
+            }
+
+            .card-text {
+                color: var(--dark-text-color);
             }
         }
     }
