@@ -1,5 +1,9 @@
 ---
+# Only the main Sass file needs front matter (the dashes are enough)
 @charset "utf-8";
+---
+
+$enable-important-utilities: true;
 
 // Import core styles
 @import "variables";
@@ -7,7 +11,7 @@
 @import "layout";
 @import "components";
 
-// Root variables
+/* Root variables */
 :root {
     --primary-color: #{$primary-color};
     --secondary-color: #{$secondary-color};
