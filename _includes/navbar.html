@@ -1,26 +1,26 @@
 <div class="container-fluid" id="navbar">
 <nav class="navbar navbar-expand-lg fixed-top">
     <div class="container">
-        <a class="navbar-brand" href="/">Edwin Gigi</a>
+        <a class="navbar-brand" href="{{ site.baseurl }}/">Edwin Gigi</a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
             <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse" id="navbarNav">
             <ul class="navbar-nav ms-auto">
                 <li class="nav-item">
-                    <a class="nav-link" href="#about">About</a>
+                    <a class="nav-link" href="{{ site.baseurl }}/#about">About</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#experience">Experience</a>
+                    <a class="nav-link" href="{{ site.baseurl }}/#experience">Experience</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#projects">Projects</a>
+                    <a class="nav-link" href="{{ site.baseurl }}/#projects">Projects</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#contact">Contact</a>
+                    <a class="nav-link" href="{{ site.baseurl }}/#contact">Contact</a>
                 </li>
                 <li class="nav-item">
-                    <button id="theme-toggle" class="btn btn-link nav-link">
+                    <button id="theme-toggle" class="btn btn-link nav-link theme-toggle">
                         <i class="fas fa-moon"></i>
                     </button>
                 </li>
@@ -37,6 +37,7 @@
     padding: 1rem 0;
     transition: all 0.3s ease;
     border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+    z-index: 1000;
 }
 
 .navbar.scrolled {
@@ -48,6 +49,7 @@
     font-weight: 700;
     color: var(--primary-color);
     font-size: 1.5rem;
+    transition: color 0.3s ease;
 }
 
 .nav-link {
@@ -56,6 +58,7 @@
     padding: 0.5rem 1rem;
     transition: all 0.3s ease;
     position: relative;
+    text-decoration: none;
 }
 
 .nav-link::after {
@@ -78,6 +81,32 @@
     color: var(--primary-color);
 }
 
+.theme-toggle {
+    padding: 0.5rem;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease;
+}
+
+.theme-toggle:hover {
+    background: rgba(var(--primary-color), 0.1);
+    transform: rotate(15deg);
+}
+
+.theme-toggle i {
+    font-size: 1.2rem;
+    color: var(--text-color);
+    transition: all 0.3s ease;
+}
+
+.theme-toggle:hover i {
+    color: var(--primary-color);
+}
+
 /* Dark mode styles */
 [data-theme="dark"] .navbar {
     background: rgba(17, 24, 39, 0.8);
@@ -96,9 +125,32 @@
     color: var(--primary-color);
 }
 
+[data-theme="dark"] .theme-toggle:hover {
+    background: rgba(var(--primary-color), 0.2);
+}
+
 /* Fix for content overlap */
 body {
-    padding-top: 76px; /* Height of navbar */
+    padding-top: 76px;
+}
+
+/* Mobile styles */
+@media (max-width: 768px) {
+    .navbar-collapse {
+        background: var(--card-bg);
+        padding: 1rem;
+        border-radius: 0.5rem;
+        margin-top: 1rem;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    }
+    
+    .nav-link {
+        padding: 0.5rem 0;
+    }
+    
+    .theme-toggle {
+        margin-top: 0.5rem;
+    }
 }
 </style>
 
@@ -137,7 +189,7 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     });
     
-    // Smooth scrolling
+    // Smooth scrolling with offset
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
         anchor.addEventListener('click', function(e) {
             e.preventDefault();
@@ -149,6 +201,12 @@ document.addEventListener('DOMContentLoaded', function() {
                     top: targetPosition,
                     behavior: 'smooth'
                 });
+                
+                // Close mobile menu if open
+                const navbarCollapse = document.querySelector('.navbar-collapse');
+                if (navbarCollapse.classList.contains('show')) {
+                    navbarCollapse.classList.remove('show');
+                }
             }
         });
     });
