@@ -525,8 +525,8 @@ h1 {
 
 // Name section styles
 .name-section {
-    width: 100vw;
-    height: 100vh;
+    width: 100%;
+    min-height: 60vh;
     position: relative;
     overflow: hidden;
     margin: 0;
@@ -554,25 +554,20 @@ h1 {
         position: relative;
         z-index: 2;
         padding: 2rem;
-        max-width: 1200px;
-        margin: 0 auto;
     }
     
     h1 {
-        font-size: 4.5rem;
+        font-size: 3.5rem;
         font-weight: 700;
-        margin-bottom: 1.5rem;
+        margin-bottom: 1rem;
         color: white;
         text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
-        animation: fadeInDown 1s ease;
     }
     
     p {
-        font-size: 1.5rem;
+        font-size: 1.25rem;
         color: rgba(255, 255, 255, 0.9);
-        margin-bottom: 2rem;
-        animation: fadeInUp 1s ease 0.3s;
-        animation-fill-mode: both;
+        margin-bottom: 1.5rem;
     }
     
     #darkModeToggle {
@@ -582,8 +577,6 @@ h1 {
         padding: 0.75rem;
         border-radius: 50%;
         transition: all 0.3s ease;
-        animation: fadeInUp 1s ease 0.6s;
-        animation-fill-mode: both;
         
         &:hover {
             background: rgba(255, 255, 255, 0.2);
@@ -600,33 +593,40 @@ h1 {
     }
 }
 
-@keyframes fadeInDown {
-    from {
-        opacity: 0;
-        transform: translateY(-20px);
+// Role cards
+.role-card {
+    background: var(--card-bg);
+    backdrop-filter: blur(10px);
+    border-radius: 1rem;
+    padding: 2rem;
+    text-align: center;
+    transition: all 0.3s ease;
+    border: 1px solid var(--border-color);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    height: 100%;
+    
+    &:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
     }
-    to {
-        opacity: 1;
-        transform: translateY(0);
+    
+    .role-icon {
+        font-size: 2.5rem;
+        color: var(--primary-color);
+        margin-bottom: 1rem;
     }
-}
-
-@keyframes fadeInUp {
-    from {
-        opacity: 0;
-        transform: translateY(20px);
+    
+    h3 {
+        color: var(--text-color);
+        font-size: 1.5rem;
+        margin-bottom: 1rem;
+        font-weight: 600;
     }
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
-}
-
-[data-theme="dark"] {
-    .name-section {
-        &::before {
-            background: linear-gradient(to bottom, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.5));
-        }
+    
+    p {
+        color: var(--text-light);
+        font-size: 1rem;
+        margin-bottom: 0;
     }
 }
 
