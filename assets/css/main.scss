@@ -7,28 +7,44 @@
 @import "layout";
 @import "components";
 
-// Modern color scheme with gradients
+// CSS Variables for light mode
 :root {
-    --primary-color: #2563eb;
-    --secondary-color: #1e40af;
-    --accent-color: #3b82f6;
-    --background-color: #f8fafc;
-    --text-color: #1e293b;
-    --text-light: #64748b;
-    --card-bg: #ffffff;
-    --border-color: #e2e8f0;
-    --gradient-primary: linear-gradient(135deg, #2563eb, #1e40af);
-    --gradient-accent: linear-gradient(135deg, #3b82f6, #2563eb);
-    --gradient-dark: linear-gradient(135deg, #1e40af, #1e3a8a);
+    --primary-color: #{$primary-color};
+    --secondary-color: #{$secondary-color};
+    --accent-color: #{$accent-color};
+    --background-color: #{$background-color};
+    --text-color: #{$text-color};
+    --text-light: #{$text-light};
+    --card-bg: #{$card-bg};
+    --border-color: #{$border-color};
+    --gradient-primary: #{$gradient-primary};
+    --gradient-accent: #{$gradient-accent};
+    --gradient-dark: #{$gradient-dark};
+}
+
+// CSS Variables for dark mode
+[data-theme="dark"] {
+    --primary-color: #{$dark-primary-color};
+    --secondary-color: #{$dark-secondary-color};
+    --accent-color: #{$dark-accent-color};
+    --background-color: #{$dark-background-color};
+    --text-color: #{$dark-text-color};
+    --text-light: #{$dark-text-light};
+    --card-bg: #{$dark-card-bg};
+    --border-color: #{$dark-border-color};
+    --gradient-primary: #{$dark-gradient-primary};
+    --gradient-accent: #{$dark-gradient-accent};
+    --gradient-dark: #{$dark-gradient-dark};
 }
 
 // Base styles with modern features
 body {
-    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+    font-family: $font-family-base;
     background-color: var(--background-color);
     color: var(--text-color);
-    line-height: 1.6;
+    line-height: $line-height-base;
     overflow-x: hidden;
+    transition: background-color 0.3s ease, color 0.3s ease;
     background-image: 
         radial-gradient(circle at 100% 0%, rgba(37, 99, 235, 0.1) 0%, transparent 50%),
         radial-gradient(circle at 0% 100%, rgba(30, 64, 175, 0.1) 0%, transparent 50%);
@@ -63,13 +79,13 @@ h1 {
 
 // Advanced card design with glassmorphism
 .card {
-    background: rgba(255, 255, 255, 0.8);
+    background: var(--card-bg);
     backdrop-filter: blur(10px);
     border-radius: 1rem;
     padding: 2rem;
     margin-bottom: 2rem;
     box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
-    border: 1px solid rgba(255, 255, 255, 0.2);
+    border: 1px solid var(--border-color);
     transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
     position: relative;
     overflow: hidden;
@@ -312,6 +328,8 @@ h1 {
 // Project-specific styles
 .project-card {
     @extend .card;
+    background: rgba(var(--card-bg), 0.8);
+    backdrop-filter: blur(10px);
     
     .project-image-container {
         position: relative;
@@ -333,7 +351,7 @@ h1 {
         left: 0;
         right: 0;
         bottom: 0;
-        background: rgba(37, 99, 235, 0.8);
+        background: rgba(var(--primary-color), 0.8);
         display: flex;
         align-items: center;
         justify-content: center;
@@ -368,7 +386,7 @@ h1 {
 }
 
 .project-title {
-    color: $primary-color;
+    color: var(--primary-color);
     margin-bottom: 1rem;
     font-weight: 700;
     position: relative;
@@ -381,7 +399,7 @@ h1 {
         left: 0;
         width: 100%;
         height: 2px;
-        background: $gradient-primary;
+        background: var(--gradient-primary);
         transform: scaleX(0);
         transform-origin: left;
         transition: transform 0.4s ease;
@@ -393,7 +411,7 @@ h1 {
 }
 
 .project-description {
-    color: $text-light;
+    color: var(--text-light);
     font-size: 1.1rem;
     line-height: 1.6;
     margin-bottom: 1.5rem;
@@ -435,5 +453,36 @@ h1 {
     100% {
         opacity: 0;
         transform: scale(2);
+    }
+}
+
+// Dark mode specific styles
+[data-theme="dark"] {
+    .card {
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+    }
+    
+    .project-card {
+        background: rgba(var(--card-bg), 0.8);
+    }
+    
+    .tech-badge {
+        background: rgba(var(--primary-color), 0.1);
+        color: var(--primary-color);
+        
+        &:hover {
+            background: var(--primary-color);
+            color: var(--card-bg);
+        }
+    }
+    
+    .btn-outline-primary {
+        border-color: var(--primary-color);
+        color: var(--primary-color);
+        
+        &:hover {
+            background: var(--gradient-primary);
+            color: var(--card-bg);
+        }
     }
 }
