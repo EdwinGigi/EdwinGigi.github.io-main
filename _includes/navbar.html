@@ -20,7 +20,7 @@
                     <a class="nav-link" href="{{ site.baseurl }}/#contact">Contact</a>
                 </li>
                 <li class="nav-item">
-                    <button id="theme-toggle" class="btn btn-link nav-link theme-toggle">
+                    <button id="theme-toggle" class="btn theme-toggle" aria-label="Toggle dark mode">
                         <i class="fas fa-moon"></i>
                     </button>
                 </li>
@@ -90,6 +90,10 @@
     align-items: center;
     justify-content: center;
     transition: all 0.3s ease;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    margin-left: 0.5rem;
 }
 
 .theme-toggle:hover {
@@ -164,6 +168,13 @@ document.addEventListener('DOMContentLoaded', function() {
         document.documentElement.setAttribute('data-theme', theme);
         localStorage.setItem('theme', theme);
         themeToggle.innerHTML = theme === 'dark' ? '<i class="fas fa-sun"></i>' : '<i class="fas fa-moon"></i>';
+        
+        // Update body class for dark mode
+        if (theme === 'dark') {
+            document.body.classList.add('dark-mode');
+        } else {
+            document.body.classList.remove('dark-mode');
+        }
     }
     
     // Check for saved theme preference
