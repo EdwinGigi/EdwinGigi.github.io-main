@@ -7,7 +7,7 @@
 @import "layout";
 @import "components";
 
-// Root variables for light mode
+// Root variables
 :root {
     --primary-color: #{$primary-color};
     --secondary-color: #{$secondary-color};
@@ -22,7 +22,6 @@
     --gradient-dark: #{$gradient-dark};
 }
 
-// CSS Variables for dark mode
 [data-theme="dark"] {
     --primary-color: #{$dark-primary-color};
     --secondary-color: #{$dark-secondary-color};
@@ -37,7 +36,7 @@
     --gradient-dark: #{$dark-gradient-dark};
 }
 
-// Base styles with modern features
+// Base styles
 body {
     font-family: $font-family-base;
     background-color: var(--background-color);
@@ -49,6 +48,126 @@ body {
     margin: 0;
     padding: 0;
     padding-top: 70px;
+}
+
+// Card base styles
+.card {
+    background: var(--card-bg);
+    backdrop-filter: blur(10px);
+    border-radius: 1rem;
+    padding: 2rem;
+    margin-bottom: 2rem;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+    border: 1px solid var(--border-color);
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    position: relative;
+    overflow: hidden;
+
+    &::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        height: 4px;
+        background: var(--gradient-primary);
+        transform: scaleX(0);
+        transform-origin: left;
+        transition: transform 0.4s ease;
+    }
+
+    &:hover {
+        transform: translateY(-5px) scale(1.02);
+        box-shadow: 0 12px 40px rgba(0, 0, 0, 0.15);
+
+        &::before {
+            transform: scaleX(1);
+        }
+    }
+}
+
+// Role cards
+.role-card {
+    background: var(--card-bg);
+    border-radius: 1rem;
+    padding: 2.5rem 2rem;
+    text-align: center;
+    transition: all 0.3s ease;
+    height: 100%;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    border: 1px solid var(--border-color);
+    margin-bottom: 1.5rem;
+
+    h3 {
+        color: var(--primary-color);
+        margin: 1.25rem 0;
+        font-size: 1.75rem;
+        font-weight: 600;
+    }
+
+    p {
+        color: var(--text-color);
+        margin-bottom: 0;
+        font-size: 1.1rem;
+        line-height: 1.6;
+        opacity: 0.9;
+    }
+
+    i {
+        font-size: 2.5rem;
+        color: var(--primary-color);
+        margin-bottom: 1.25rem;
+    }
+
+    &:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
+    }
+}
+
+// Dark mode overrides
+[data-theme="dark"] {
+    body {
+        background-image: 
+            radial-gradient(circle at 100% 0%, rgba(96, 165, 250, 0.1) 0%, transparent 50%),
+            radial-gradient(circle at 0% 100%, rgba(59, 130, 246, 0.1) 0%, transparent 50%);
+    }
+
+    .card, .role-card {
+        background: var(--dark-card-bg);
+        border-color: var(--dark-border-color);
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+
+        h2, h3 {
+            color: var(--dark-primary-color);
+        }
+
+        p, li {
+            color: var(--dark-text-color);
+            opacity: 1;
+        }
+
+        i {
+            color: var(--dark-primary-color);
+        }
+
+        &:hover {
+            box-shadow: 0 8px 15px rgba(0, 0, 0, 0.4);
+        }
+    }
+
+    .navbar {
+        background: var(--dark-card-bg);
+        border-color: var(--dark-border-color);
+
+        .navbar-brand {
+            color: var(--dark-primary-color);
+        }
+
+        .nav-link {
+            color: var(--dark-text-color);
+        }
+    }
 }
 
 // Modern typography with gradient text
@@ -75,42 +194,6 @@ h1 {
     padding: 2rem;
     position: relative;
     z-index: 1;
-}
-
-// Advanced card design with glassmorphism
-.card {
-    background: var(--card-bg);
-    backdrop-filter: blur(10px);
-    border-radius: 1rem;
-    padding: 2rem;
-    margin-bottom: 2rem;
-    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
-    border: 1px solid var(--border-color);
-    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
-    position: relative;
-    overflow: hidden;
-    
-    &::before {
-        content: '';
-        position: absolute;
-        top: 0;
-        left: 0;
-        right: 0;
-        height: 4px;
-        background: var(--gradient-primary);
-        transform: scaleX(0);
-        transform-origin: left;
-        transition: transform 0.4s ease;
-    }
-    
-    &:hover {
-        transform: translateY(-5px) scale(1.02);
-        box-shadow: 0 12px 40px rgba(0, 0, 0, 0.15);
-        
-        &::before {
-            transform: scaleX(1);
-        }
-    }
 }
 
 // Skills section with modern grid and animations
@@ -435,149 +518,6 @@ h1 {
     }
 }
 
-// Dark mode specific styles
-[data-theme="dark"] {
-    body {
-        background-image: 
-            radial-gradient(circle at 100% 0%, rgba(96, 165, 250, 0.1) 0%, transparent 50%),
-            radial-gradient(circle at 0% 100%, rgba(59, 130, 246, 0.1) 0%, transparent 50%);
-    }
-    
-    .card {
-        background: var(--dark-card-bg);
-        border-color: var(--dark-border-color);
-        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
-
-        .card-title {
-            color: var(--dark-primary-color);
-        }
-
-        .card-text {
-            color: var(--dark-text-color);
-            opacity: 1;
-        }
-
-        h2, h3 {
-            color: var(--dark-primary-color);
-        }
-
-        p, li {
-            color: var(--dark-text-color);
-            opacity: 1;
-        }
-    }
-    
-    .project-card {
-        background: var(--dark-card-bg);
-        border-color: var(--dark-border-color);
-
-        .project-title {
-            color: var(--dark-primary-color);
-        }
-
-        .project-description {
-            color: var(--dark-text-color);
-        }
-    }
-    
-    .tech-badge {
-        background: rgba(var(--primary-color), 0.1);
-        color: var(--primary-color);
-        
-        &:hover {
-            background: var(--primary-color);
-            color: var(--card-bg);
-        }
-    }
-    
-    .btn-outline-primary {
-        border-color: var(--primary-color);
-        color: var(--primary-color);
-        
-        &:hover {
-            background: var(--gradient-primary);
-            color: var(--card-bg);
-        }
-    }
-    
-    .experience-item {
-        background: var(--dark-card-bg);
-        border-color: var(--dark-border-color);
-
-        .company {
-            color: var(--dark-primary-color);
-        }
-
-        .date {
-            color: var(--dark-text-light);
-        }
-
-        ul li {
-            color: var(--dark-text-color);
-        }
-    }
-    
-    .skill-bar {
-        background: rgba(var(--primary-color), 0.1);
-        
-        &::after {
-            background: var(--gradient-primary);
-        }
-    }
-    
-    .contact-links a {
-        border-color: var(--primary-color);
-        color: var(--primary-color);
-        
-        &:hover {
-            background: var(--gradient-primary);
-            color: var(--card-bg);
-        }
-    }
-    
-    .skill-category {
-        background: var(--dark-card-bg);
-        border-color: var(--dark-border-color);
-
-        h3 {
-            color: var(--dark-primary-color);
-        }
-
-        .skill-item {
-            .skill-name {
-                color: var(--dark-text-color);
-            }
-
-            &:hover {
-                background: rgba(96, 165, 250, 0.1);
-            }
-        }
-    }
-    
-    .role-card {
-        background: var(--dark-card-bg);
-        border-color: var(--dark-border-color);
-        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
-
-        h3 {
-            color: var(--dark-primary-color);
-        }
-
-        p {
-            color: var(--dark-text-color);
-            opacity: 1;
-        }
-
-        i {
-            color: var(--dark-primary-color);
-        }
-
-        &:hover {
-            box-shadow: 0 8px 15px rgba(0, 0, 0, 0.4);
-        }
-    }
-}
-
 // Name section styles
 .name-section {
     width: 100%;
@@ -644,45 +584,6 @@ h1 {
         i {
             transition: transform 0.3s ease;
         }
-    }
-}
-
-// Role cards on banner
-.role-card {
-    background: var(--card-bg);
-    border-radius: 1rem;
-    padding: 2.5rem 2rem;
-    text-align: center;
-    transition: all 0.3s ease;
-    height: 100%;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    border: 1px solid var(--border-color);
-    margin-bottom: 1.5rem;
-
-    h3 {
-        color: var(--primary-color);
-        margin: 1.25rem 0;
-        font-size: 1.75rem;
-        font-weight: 600;
-    }
-
-    p {
-        color: var(--text-color);
-        margin-bottom: 0;
-        font-size: 1.1rem;
-        line-height: 1.6;
-        opacity: 0.9;
-    }
-
-    i {
-        font-size: 2.5rem;
-        color: var(--primary-color);
-        margin-bottom: 1.25rem;
-    }
-
-    &:hover {
-        transform: translateY(-5px);
-        box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
     }
 }
 
