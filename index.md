@@ -3,14 +3,16 @@ layout: default
 title: "Edwin Gigi - Software Engineer"
 ---
 
-<div class="container mt-5">
-    <div class="row justify-content-center">
-        <div class="col-12 text-center mb-5">
-            <h1 class="display-4 fw-bold gradient-text">Edwin Gigi</h1>
-            <p class="lead text-muted">Software Engineer | Machine Learning Enthusiast | Cloud Developer</p>
-            <button id="darkModeToggle" class="btn btn-link" aria-label="Toggle dark mode">
-                <i class="fas fa-moon"></i>
-            </button>
+<div class="name-section" style="background-image: url('{{ "/assets/images/banner.jpg" | relative_url }}');">
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-12 text-center">
+                <h1 class="display-4 fw-bold gradient-text">Edwin Gigi</h1>
+                <p class="lead text-muted">Software Engineer | Machine Learning Enthusiast | Cloud Developer</p>
+                <button id="darkModeToggle" class="btn btn-link" aria-label="Toggle dark mode">
+                    <i class="fas fa-moon"></i>
+                </button>
+            </div>
         </div>
     </div>
 </div>
