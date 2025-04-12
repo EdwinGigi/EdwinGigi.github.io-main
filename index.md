@@ -3,7 +3,7 @@ layout: default
 title: "Edwin Gigi - Software Engineer"
 ---
 
-<div class="name-section">
+<div class="name-section" style="background-image: url('{{ "/assets/images/banner.jpg" | relative_url }}')">
     <div class="container">
         <div class="row justify-content-center">
             <div class="col-12 text-center">
