@@ -5,26 +5,26 @@
 <script src="{{ "/assets/js/darkMode.js" | relative_url }}"></script>
 
 <!-- Footer -->
-<footer class="footer bg-white py-5">
+<footer class="footer">
     <div class="container">
         <div class="row">
             <div class="col-md-6">
-                <h3 class="mb-4">Let's Connect</h3>
                 <div class="social-links">
-                    <a href="https://linkedin.com/in/edwin-gigi" target="_blank" class="social-link">
+                    <a href="https://www.linkedin.com/in/edwin-gigi-0b0b0b0b/" target="_blank" class="social-link">
                         <i class="fab fa-linkedin"></i>
                     </a>
-                    <a href="https://github.com/edwingigi" target="_blank" class="social-link">
+                    <a href="https://github.com/EdwinGigi" target="_blank" class="social-link">
                         <i class="fab fa-github"></i>
                     </a>
-                    <a href="mailto:edwingigi2012@gmail.com" class="social-link">
+                    <a href="mailto:edwin.gigi@example.com" class="social-link">
                         <i class="fas fa-envelope"></i>
                     </a>
                 </div>
             </div>
             <div class="col-md-6 text-md-end">
-                <p class="mb-0">&copy; {{ site.time | date: '%Y' }} Edwin Gigi. All rights reserved.</p>
-                <p class="text-muted">Built with ❤️ using Jekyll</p>
+                <p class="copyright">
+                    &copy; <script>document.write(new Date().getFullYear())</script> Edwin Gigi. Built with <a href="https://jekyllrb.com/" target="_blank">Jekyll</a>.
+                </p>
             </div>
         </div>
     </div>
@@ -32,37 +32,96 @@
 
 <style>
 .footer {
-    border-top: 1px solid var(--border-color);
+    background: var(--card-bg);
+    padding: 2rem 0;
     margin-top: 4rem;
+    border-top: 1px solid var(--border-color);
 }
 
 .social-links {
     display: flex;
-    gap: 1rem;
+    gap: 1.5rem;
 }
 
 .social-link {
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    width: 40px;
-    height: 40px;
-    border-radius: 50%;
-    background: var(--background-color);
-    color: var(--primary-color);
+    color: var(--text-color);
+    font-size: 1.5rem;
     transition: all 0.3s ease;
+    position: relative;
+    display: inline-block;
 }
 
 .social-link:hover {
-    background: var(--primary-color);
-    color: white;
+    color: var(--primary-color);
     transform: translateY(-3px);
 }
 
-@media (max-width: 767.98px) {
-    .col-md-6:last-child {
-        text-align: left !important;
-        margin-top: 2rem;
+.social-link::after {
+    content: '';
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background: var(--gradient-primary);
+    transform: scaleX(0);
+    transform-origin: right;
+    transition: transform 0.3s ease;
+}
+
+.social-link:hover::after {
+    transform: scaleX(1);
+    transform-origin: left;
+}
+
+.copyright {
+    color: var(--text-light);
+    margin: 0;
+    font-size: 0.9rem;
+}
+
+.copyright a {
+    color: var(--primary-color);
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.copyright a:hover {
+    color: var(--secondary-color);
+}
+
+/* Dark mode styles */
+[data-theme="dark"] .footer {
+    background: var(--card-bg);
+    border-top-color: var(--border-color);
+}
+
+[data-theme="dark"] .social-link {
+    color: var(--text-color);
+}
+
+[data-theme="dark"] .social-link:hover {
+    color: var(--primary-color);
+}
+
+[data-theme="dark"] .copyright {
+    color: var(--text-light);
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+    .footer {
+        text-align: center;
+        padding: 1.5rem 0;
+    }
+    
+    .social-links {
+        justify-content: center;
+        margin-bottom: 1rem;
+    }
+    
+    .copyright {
+        text-align: center;
     }
 }
 </style>
