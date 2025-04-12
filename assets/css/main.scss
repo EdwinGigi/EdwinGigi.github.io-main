@@ -191,7 +191,6 @@ h1 {
 // Experience section with modern card design
 .experience-item {
     background: var(--card-bg);
-    backdrop-filter: blur(10px);
     border-radius: 1rem;
     padding: 2rem;
     margin-bottom: 2rem;
@@ -218,19 +217,17 @@ h1 {
     }
     
     ul {
-        list-style-type: none;
-        padding-left: 0;
+        list-style: none;
+        padding: 0;
         margin: 0;
         
         li {
             margin-bottom: 0.75rem;
             padding: 0.5rem;
-            border-radius: 0.5rem;
+            color: var(--text-color);
             transition: all 0.3s ease;
-            background: rgba(var(--primary-color), 0.05);
             
             &:hover {
-                background: rgba(var(--primary-color), 0.1);
                 transform: translateX(5px);
             }
             
