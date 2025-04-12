@@ -151,8 +151,7 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 Feel free to reach out if you have any questions or suggestions:
 - GitHub: [@EdwinGigi](https://github.com/EdwinGigi)
-- LinkedIn: [Your LinkedIn Profile]
-- Email: [Your Email]
+- LinkedIn: [@edwin-gigi](https://www.linkedin.com/in/edwin-gigi/)
 
 ## 🙏 Acknowledgments
 
