@@ -134,7 +134,7 @@ title: "Edwin Gigi - Software Engineer"
                         <div class="skill-category">
                             <h3>Languages</h3>
                             <div class="skill-item">
-                                <span class="skill-name">Python, JavaScript</span>
+                                <span class="skill-name">PHP, JavaScript</span>
                                 <div class="skill-stars">
                                     <i class="fas fa-star"></i>
                                     <i class="fas fa-star"></i>
@@ -144,8 +144,9 @@ title: "Edwin Gigi - Software Engineer"
                                 </div>
                             </div>
                             <div class="skill-item">
-                                <span class="skill-name">Java, TypeScript, C#</span>
+                                <span class="skill-name">SQL, MySQL</span>
                                 <div class="skill-stars">
+                                    <i class="fas fa-star"></i>
                                     <i class="fas fa-star"></i>
                                     <i class="fas fa-star"></i>
                                     <i class="fas fa-star"></i>
@@ -153,12 +154,11 @@ title: "Edwin Gigi - Software Engineer"
                                 </div>
                             </div>
                             <div class="skill-item">
-                                <span class="skill-name">C++, Go</span>
+                                <span class="skill-name">Python</span>
                                 <div class="skill-stars">
                                     <i class="fas fa-star"></i>
                                     <i class="fas fa-star"></i>
                                     <i class="fas fa-star"></i>
-                                    <i class="fas fa-star-half-alt"></i>
                                 </div>
                             </div>
                         </div>
@@ -166,7 +166,7 @@ title: "Edwin Gigi - Software Engineer"
                         <div class="skill-category">
                             <h3>Frameworks</h3>
                             <div class="skill-item">
-                                <span class="skill-name">React, Node.js</span>
+                                <span class="skill-name">Laravel, Vue.js, Node.js</span>
                                 <div class="skill-stars">
                                     <i class="fas fa-star"></i>
                                     <i class="fas fa-star"></i>
@@ -176,18 +176,8 @@ title: "Edwin Gigi - Software Engineer"
                                 </div>
                             </div>
                             <div class="skill-item">
-                                <span class="skill-name">TensorFlow, PyTorch</span>
+                                <span class="skill-name">Flask</span>
                                 <div class="skill-stars">
-                                    <i class="fas fa-star"></i>
-                                    <i class="fas fa-star"></i>
-                                    <i class="fas fa-star"></i>
-                                    <i class="fas fa-star"></i>
-                                </div>
-                            </div>
-                            <div class="skill-item">
-                                <span class="skill-name">Flask, Express</span>
-                                <div class="skill-stars">
-                                    <i class="fas fa-star"></i>
                                     <i class="fas fa-star"></i>
                                     <i class="fas fa-star"></i>
                                     <i class="fas fa-star"></i>
@@ -198,7 +188,7 @@ title: "Edwin Gigi - Software Engineer"
                         <div class="skill-category">
                             <h3>Tools & Technologies</h3>
                             <div class="skill-item">
-                                <span class="skill-name">Git, Docker, Kubernetes</span>
+                                <span class="skill-name">Git, Docker</span>
                                 <div class="skill-stars">
                                     <i class="fas fa-star"></i>
                                     <i class="fas fa-star"></i>
@@ -208,7 +198,7 @@ title: "Edwin Gigi - Software Engineer"
                                 </div>
                             </div>
                             <div class="skill-item">
-                                <span class="skill-name">AWS, GCP, Azure</span>
+                                <span class="skill-name">RESTful APIs, Postman, Yaml specifications</span>
                                 <div class="skill-stars">
                                     <i class="fas fa-star"></i>
                                     <i class="fas fa-star"></i>
@@ -217,7 +207,7 @@ title: "Edwin Gigi - Software Engineer"
                                 </div>
                             </div>
                             <div class="skill-item">
-                                <span class="skill-name">CI/CD, Terraform, Ansible</span>
+                                <span class="skill-name">CI/CD, Database management</span>
                                 <div class="skill-stars">
                                     <i class="fas fa-star"></i>
                                     <i class="fas fa-star"></i>
