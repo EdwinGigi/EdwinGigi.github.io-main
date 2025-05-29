@@ -33,13 +33,6 @@ title: "Edwin Gigi - Software Engineer"
                     <p>Expertise in both frontend and backend development</p>
                 </div>
             </div>
-            <div class="col-md-4 mb-4">
-                <div class="role-card">
-                    <i class="fas fa-envelope role-icon"></i>
-                    <h3>Contact</h3>
-                    <p>Let's work together on your next project</p>
-                </div>
-            </div>
         </div>
     </div>
 </div>
