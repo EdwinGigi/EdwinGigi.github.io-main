@@ -11,9 +11,8 @@ title: "Edwin Gigi - Software Engineer"
                     <div class="card-body">
                         <h2 class="card-title">About Me</h2>
                         <p class="card-text">
-                            I am a passionate software engineer with expertise in full-stack development, including RestAPI development, project management and SOLID principles. 
-                            My journey in technology began with a fascination for solving complex problems and has evolved into a career 
-                            focused on creating innovative solutions that make a real impact.
+                           I am a dedicated software engineer specializing in full-stack development, with strong expertise in RESTful API design, project management, and software architecture guided by SOLID principles.
+                           My career began with a deep curiosity for solving complex problems and has grown into a commitment to building scalable, maintainable, and impactful software solutions.
                         </p>
                     </div>
                 </div>
