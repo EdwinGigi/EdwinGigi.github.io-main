@@ -159,6 +159,7 @@ title: "Edwin Gigi - Software Engineer"
                                     <i class="fas fa-star"></i>
                                     <i class="fas fa-star"></i>
                                     <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
                                 </div>
                             </div>
                         </div>
@@ -194,12 +195,12 @@ title: "Edwin Gigi - Software Engineer"
                                     <i class="fas fa-star"></i>
                                     <i class="fas fa-star"></i>
                                     <i class="fas fa-star"></i>
-                                    <i class="fas fa-star"></i>
                                 </div>
                             </div>
                             <div class="skill-item">
                                 <span class="skill-name">RESTful APIs, Postman, Yaml specifications</span>
                                 <div class="skill-stars">
+                                    <i class="fas fa-star"></i>
                                     <i class="fas fa-star"></i>
                                     <i class="fas fa-star"></i>
                                     <i class="fas fa-star"></i>
