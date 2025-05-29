@@ -68,11 +68,9 @@ title: "Edwin Gigi - Software Engineer"
                         <p class="date">09/2020 – 09/2021</p>
                         <ul>
                             <li>Maintained international client systems across multiple sites via remote access</li>
-                            <li></li>
-                            <li>Implemented OpenVino technology for real-time human pose estimation</li>
-                            <li>Built threaded data capture system on Raspberry Pi</li>
-                            <li>Developed RESTful API using Flask with JWT authentication</li>
-                            <li>Created responsive web interfaces using Bootstrap and jQuery</li>
+                            <li>Oversaw hardware and shipping processes of our systems for clients</li>
+                            <li>In house repairs and upgrades of our clients systems and company systems</li>
+                            <li>Scheduled system upgrades and updates for our clients</li>
                         </ul>
                     </div>
                 </div>
