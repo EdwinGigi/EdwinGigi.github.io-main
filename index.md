@@ -132,7 +132,7 @@ title: "Edwin Gigi - Software Engineer"
                         <div class="skill-category">
                             <h3>Languages</h3>
                             <div class="skill-item">
-                                <span class="skill-name">PHP, JavaScript</span>
+                                <span class="skill-name">PHP</span>
                                 <div class="skill-stars">
                                     <i class="fas fa-star"></i>
                                     <i class="fas fa-star"></i>
@@ -165,7 +165,7 @@ title: "Edwin Gigi - Software Engineer"
                         <div class="skill-category">
                             <h3>Frameworks</h3>
                             <div class="skill-item">
-                                <span class="skill-name">Laravel, Vue.js, Node.js</span>
+                                <span class="skill-name">Laravel, Vue.js</span>
                                 <div class="skill-stars">
                                     <i class="fas fa-star"></i>
                                     <i class="fas fa-star"></i>
