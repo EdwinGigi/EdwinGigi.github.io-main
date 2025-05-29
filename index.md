@@ -64,11 +64,11 @@ title: "Edwin Gigi - Software Engineer"
                     </div>
 
                     <div class="experience-item">
-                        <h3 class="company">Warehouse Control Solutions - Software Developer</h3>
-                        <p class="date">08/2019 – 09/2020</p>
+                        <h3 class="company">Warehouse Control Solutions - Software Support Engineer</h3>
+                        <p class="date">09/2020 – 09/2021</p>
                         <ul>
-                            <li>Designed and trained CNNs using TensorFlow, achieving high accuracy for healthcare applications</li>
-                            <li>Developed Python GUI for data labeling and processing</li>
+                            <li>Maintained international client systems across multiple sites via remote access</li>
+                            <li></li>
                             <li>Implemented OpenVino technology for real-time human pose estimation</li>
                             <li>Built threaded data capture system on Raspberry Pi</li>
                             <li>Developed RESTful API using Flask with JWT authentication</li>
